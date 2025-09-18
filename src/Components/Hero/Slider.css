@@ -1,0 +1,34 @@
+/* Move bullets to the right (if you’re using that earlier tweak) */
+.slider-hero .awssld__bullets {
+  position: absolute !important;
+  right: 20px !important;
+  left: auto !important;
+  top: 50% !important;
+  bottom: auto !important;
+  transform: translateY(-50%);
+  width: auto !important;
+  display: flex !important;
+  flex-direction: column !important;
+  gap: 10px;
+  padding: 0;
+  z-index: 30;
+}
+.slider-hero .awssld__bullets > button {
+  width: 10px;
+  height: 10px;
+  background-color: #fff;
+  opacity: 0.5;
+  border: none;
+  border-radius: 50%;
+  transition: opacity 0.2s ease;
+}
+.slider-hero .awssld__bullets > button:hover { opacity: 0.8; }
+.slider-hero .awssld__bullets > button.awssld__bullets--active { opacity: 1; }
+
+/* Remove slider's loading animation */
+.slider-hero .awssld__loader,
+.slider-hero .awssld__progress,
+.slider-hero [class*="awssld__loading"],
+.slider-hero [class*="awssld__spinner"] {
+  display: none !important;
+}

@@ -1,12 +1,17 @@
 import React from "react";
 import NavBar from "../../Components/NavBar/NavBar";
-import Hero from "../../Components/Hero/Hero";
+import { Outlet } from "react-router-dom";
+import Footer from "../../Components/Footer/Footer";
 
 const MainLayout = () => {
   return (
-    <div>
+    // full-page wrapper with black background
+    <div className="bg-black min-h-screen flex flex-col">
       <NavBar />
-      <Hero/>
+      <main className="flex-grow">
+        <Outlet />
+      </main>
+      <Footer />
     </div>
   );
 };
