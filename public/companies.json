@@ -1,902 +1,1366 @@
 [
-    {
-        "id": "1",
-        "name": "Innovate Solutions Inc.",
-        "logo": "https://example.com/logo/innovate-solutions.png",
+  {
+    "id": "1",
+    "name": "Stripe",
+    "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/ba/Stripe_Logo%2C_revised_2016.svg/1200px-Stripe_Logo%2C_revised_2016.svg.png",
+    "location": "San Francisco, CA",
+    "website": "https://stripe.com",
+    "industry": "Software Development",
+    "jobs": [
+      {
+        "id": "job-001",
+        "title": "Frontend Developer",
+        "bannerImage": "https://images.unsplash.com/photo-1551650975-87deedd944c3?w=800&h=400&fit=crop",
         "location": "San Francisco, CA",
-        "website": "https://innovatesolutions.com",
-        "industry": "Software Development",
-        "jobs": [
-            {
-                "id": "job-001",
-                "title": "Frontend Developer",
-                "bannerImage": "https://example.com/banner/frontend-dev.jpg",
-                "location": "San Francisco, CA",
-                "salary": "$110,000 - $135,000",
-                "jobType": "Full-time",
-                "description": "We are seeking a talented Frontend Developer to join our team. You will be responsible for building user-facing web applications using modern technologies.",
-                "requirements": [
-                    "Proficient in HTML, CSS, and JavaScript",
-                    "Experience with React or Vue.js",
-                    "Familiarity with RESTful APIs",
-                    "Good understanding of responsive design",
-                    "Excellent problem-solving skills"
-                ]
-            },
-            {
-                "id": "job-002",
-                "title": "Backend Engineer",
-                "bannerImage": "https://example.com/banner/backend-eng.jpg",
-                "location": "San Francisco, CA",
-                "salary": "$120,000 - $150,000",
-                "jobType": "Full-time",
-                "description": "Join our backend team to design, build, and maintain scalable server-side applications. You will work on our core services and APIs.",
-                "requirements": [
-                    "Strong proficiency in Node.js, Python, or Go",
-                    "Experience with database systems (SQL, NoSQL)",
-                    "Knowledge of microservices architecture",
-                    "Familiarity with cloud platforms (AWS, Azure, GCP)",
-                    "Ability to write clean, maintainable code"
-                ]
-            },
-            {
-                "id": "job-003",
-                "title": "UI/UX Designer",
-                "bannerImage": "https://example.com/banner/ui-ux-designer.jpg",
-                "location": "San Francisco, CA",
-                "salary": "$95,000 - $115,000",
-                "jobType": "Full-time",
-                "description": "We're looking for a creative UI/UX Designer to craft intuitive and visually appealing user interfaces. You will be involved in the entire design lifecycle.",
-                "requirements": [
-                    "Proven experience with design tools (Figma, Sketch, Adobe XD)",
-                    "Strong portfolio showcasing design skills",
-                    "Understanding of user-centered design principles",
-                    "Ability to conduct user research and usability testing",
-                    "Excellent communication and collaboration skills"
-                ]
-            },
-            {
-                "id": "job-004",
-                "title": "Data Scientist",
-                "bannerImage": "https://example.com/banner/data-scientist.jpg",
-                "location": "San Francisco, CA",
-                "salary": "$130,000 - $160,000",
-                "jobType": "Full-time",
-                "description": "Our data science team is looking for an experienced professional to analyze large datasets, build predictive models, and drive data-driven decisions.",
-                "requirements": [
-                    "Expertise in Python or R",
-                    "Experience with machine learning frameworks (TensorFlow, PyTorch)",
-                    "Strong statistical and analytical skills",
-                    "Knowledge of SQL and data visualization tools",
-                    "Ph.D. or Master's in a quantitative field preferred"
-                ]
-            },
-            {
-                "id": "job-005",
-                "title": "DevOps Engineer",
-                "bannerImage": "https://example.com/banner/devops-engineer.jpg",
-                "location": "San Francisco, CA",
-                "salary": "$125,000 - $155,000",
-                "jobType": "Full-time",
-                "description": "We need a skilled DevOps Engineer to manage our CI/CD pipelines, automate infrastructure, and ensure system reliability and scalability.",
-                "requirements": [
-                    "Experience with CI/CD tools (Jenkins, GitLab CI)",
-                    "Proficiency in containerization (Docker, Kubernetes)",
-                    "Knowledge of cloud infrastructure (AWS, GCP)",
-                    "Strong scripting skills (Bash, Python)",
-                    "Understanding of networking and security best practices"
-                ]
-            }
+        "salary": "$110,000 - $135,000",
+        "jobType": "Full-time",
+        "description": "We are seeking a talented Frontend Developer to join our team. You will be responsible for building user-facing web applications using modern technologies.",
+        "requirements": [
+          "Proficient in HTML, CSS, and JavaScript",
+          "Experience with React or Vue.js",
+          "Familiarity with RESTful APIs",
+          "Good understanding of responsive design",
+          "Excellent problem-solving skills"
         ]
-    },
-    {
-        "id": "2",
-        "name": "Global Tech Solutions",
-        "logo": "https://example.com/logo/global-tech.png",
+      },
+      {
+        "id": "job-002",
+        "title": "Backend Engineer",
+        "bannerImage": "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=800&h=400&fit=crop",
+        "location": "San Francisco, CA",
+        "salary": "$120,000 - $150,000",
+        "jobType": "Full-time",
+        "description": "Join our backend team to design, build, and maintain scalable server-side applications. You will work on our core services and APIs.",
+        "requirements": [
+          "Strong proficiency in Node.js, Python, or Go",
+          "Experience with database systems (SQL, NoSQL)",
+          "Knowledge of microservices architecture",
+          "Familiarity with cloud platforms (AWS, Azure, GCP)",
+          "Ability to write clean, maintainable code"
+        ]
+      },
+      {
+        "id": "job-003",
+        "title": "Full Stack Engineer",
+        "bannerImage": "https://images.unsplash.com/photo-1515879218367-8466d910aaa4?w=800&h=400&fit=crop",
+        "location": "San Francisco, CA",
+        "salary": "$130,000 - $165,000",
+        "jobType": "Full-time",
+        "description": "Build end-to-end product features across frontend and backend to deliver seamless payment experiences.",
+        "requirements": [
+          "Experience with React and Node.js",
+          "Understanding of SQL/NoSQL databases",
+          "Familiarity with CI/CD and testing frameworks",
+          "Experience building scalable web services",
+          "Strong ownership mindset"
+        ]
+      },
+      {
+        "id": "job-004",
+        "title": "Mobile Engineer (iOS/Android)",
+        "bannerImage": "https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?w=800&h=400&fit=crop",
+        "location": "San Francisco, CA",
+        "salary": "$135,000 - $170,000",
+        "jobType": "Full-time",
+        "description": "Develop high-quality mobile SDKs and apps that help businesses integrate payments on mobile.",
+        "requirements": [
+          "Proficiency in Swift/Kotlin",
+          "Experience building SDKs or large-scale apps",
+          "Knowledge of mobile security best practices",
+          "Familiarity with REST and GraphQL APIs",
+          "Performance optimization skills"
+        ]
+      },
+      {
+        "id": "job-005",
+        "title": "Site Reliability Engineer",
+        "bannerImage": "https://images.unsplash.com/photo-1518773553398-650c184e0bb3?w=800&h=400&fit=crop",
+        "location": "San Francisco, CA",
+        "salary": "$150,000 - $185,000",
+        "jobType": "Full-time",
+        "description": "Ensure reliability, scalability, and performance of mission-critical payments infrastructure.",
+        "requirements": [
+          "Experience with Kubernetes and Docker",
+          "Strong Linux and networking fundamentals",
+          "Observability tools (Prometheus, Grafana)",
+          "Incident response and on-call experience",
+          "Infrastructure as Code (Terraform)"
+        ]
+      },
+      {
+        "id": "job-006",
+        "title": "Product Manager, Payments",
+        "bannerImage": "https://images.unsplash.com/photo-1551836022-4c4c79ecde51?w=800&h=400&fit=crop",
+        "location": "San Francisco, CA",
+        "salary": "$150,000 - $200,000",
+        "jobType": "Full-time",
+        "description": "Own the roadmap for core payments experiences, balancing merchant needs and compliance.",
+        "requirements": [
+          "3+ years in product management",
+          "Payments or fintech experience",
+          "Strong data analysis and experimentation",
+          "Excellent communication with engineering/design",
+          "Customer-centric mindset"
+        ]
+      },
+      {
+        "id": "job-007",
+        "title": "Security Engineer",
+        "bannerImage": "https://images.unsplash.com/photo-1510511459019-5dda7724fd87?w=800&h=400&fit=crop",
+        "location": "San Francisco, CA",
+        "salary": "$155,000 - $190,000",
+        "jobType": "Full-time",
+        "description": "Protect our platform through secure design reviews, tooling, and incident response.",
+        "requirements": [
+          "AppSec or Cloud Security experience",
+          "Threat modeling and code review",
+          "Knowledge of OAuth, TLS, and key management",
+          "Experience with SIEM and detection tooling",
+          "PCI DSS familiarity is a plus"
+        ]
+      },
+      {
+        "id": "job-008",
+        "title": "Data Scientist, Risk",
+        "bannerImage": "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&h=400&fit=crop",
+        "location": "San Francisco, CA",
+        "salary": "$160,000 - $210,000",
+        "jobType": "Full-time",
+        "description": "Build models to detect fraud and reduce chargebacks while preserving conversion.",
+        "requirements": [
+          "Proficiency in Python/R and SQL",
+          "Experience with ML for classification",
+          "Experimentation and causal inference",
+          "Feature engineering at scale",
+          "Strong stakeholder communication"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "2",
+    "name": "Dell Technologies",
+    "logo": "https://upload.wikimedia.org/wikipedia/commons/8/82/Dell_Logo.png",
+    "location": "Austin, TX",
+    "website": "https://www.dell.com",
+    "industry": "IT Services",
+    "jobs": [
+      {
+        "id": "job-006",
+        "title": "Network Administrator",
+        "bannerImage": "https://images.unsplash.com/photo-1544197150-b99a580bb7a8?w=800&h=400&fit=crop",
         "location": "Austin, TX",
-        "website": "https://globaltechsolutions.net",
-        "industry": "IT Services",
-        "jobs": [
-            {
-                "id": "job-006",
-                "title": "Network Administrator",
-                "bannerImage": "https://example.com/banner/network-admin.jpg",
-                "location": "Austin, TX",
-                "salary": "$75,000 - $90,000",
-                "jobType": "Full-time",
-                "description": "As a Network Administrator, you will be responsible for maintaining our company's computer networks, ensuring optimal performance and security.",
-                "requirements": [
-                    "Cisco or CompTIA Network+ certification preferred",
-                    "Experience with network hardware (routers, switches)",
-                    "Knowledge of network security protocols",
-                    "Troubleshooting and problem-solving skills",
-                    "Excellent communication abilities"
-                ]
-            },
-            {
-                "id": "job-007",
-                "title": "Cloud Architect",
-                "bannerImage": "https://example.com/banner/cloud-architect.jpg",
-                "location": "Austin, TX",
-                "salary": "$140,000 - $180,000",
-                "jobType": "Full-time",
-                "description": "We are looking for a Cloud Architect to design and implement cloud-based solutions. You will be the go-to expert for our cloud infrastructure strategy.",
-                "requirements": [
-                    "Proven experience with AWS, Azure, or GCP",
-                    "Expertise in cloud security and cost management",
-                    "Strong knowledge of infrastructure as code (Terraform, CloudFormation)",
-                    "Ability to design scalable and reliable systems",
-                    "Professional cloud certification is a plus"
-                ]
-            },
-            {
-                "id": "job-008",
-                "title": "Cybersecurity Analyst",
-                "bannerImage": "https://example.com/banner/cybersecurity-analyst.jpg",
-                "location": "Austin, TX",
-                "salary": "$90,000 - $110,000",
-                "jobType": "Full-time",
-                "description": "Protect our digital assets as a Cybersecurity Analyst. You will monitor our systems for threats, respond to incidents, and enforce security policies.",
-                "requirements": [
-                    "Experience with security information and event management (SIEM) tools",
-                    "Knowledge of ethical hacking and penetration testing",
-                    "Familiarity with compliance standards (GDPR, HIPAA)",
-                    "Strong analytical and critical thinking skills",
-                    "Relevant certifications (CISSP, CEH) a plus"
-                ]
-            },
-            {
-                "id": "job-009",
-                "title": "IT Support Specialist",
-                "bannerImage": "https://example.com/banner/it-support.jpg",
-                "location": "Austin, TX",
-                "salary": "$55,000 - $70,000",
-                "jobType": "Full-time",
-                "description": "Provide first-line technical support to our employees. This role involves troubleshooting hardware, software, and network issues.",
-                "requirements": [
-                    "Excellent communication and customer service skills",
-                    "Experience with Windows and macOS operating systems",
-                    "Basic knowledge of network and server administration",
-                    "Ability to diagnose and resolve technical problems efficiently",
-                    "CompTIA A+ or similar certification"
-                ]
-            },
-            {
-                "id": "job-010",
-                "title": "Systems Administrator",
-                "bannerImage": "https://example.com/banner/systems-admin.jpg",
-                "location": "Austin, TX",
-                "salary": "$85,000 - $105,000",
-                "jobType": "Full-time",
-                "description": "We are seeking a Systems Administrator to manage and maintain our server infrastructure, ensuring high availability and performance.",
-                "requirements": [
-                    "Experience with Linux and/or Windows Server administration",
-                    "Proficiency in virtualization technologies (VMware, Hyper-V)",
-                    "Knowledge of scripting for automation (PowerShell, Bash)",
-                    "Experience with Active Directory and Group Policy",
-                    "Strong attention to detail and organizational skills"
-                ]
-            }
+        "salary": "$75,000 - $90,000",
+        "jobType": "Full-time",
+        "description": "As a Network Administrator, you will be responsible for maintaining our company's computer networks, ensuring optimal performance and security.",
+        "requirements": [
+          "Cisco or CompTIA Network+ certification preferred",
+          "Experience with network hardware (routers, switches)",
+          "Knowledge of network security protocols",
+          "Troubleshooting and problem-solving skills",
+          "Excellent communication abilities"
         ]
-    },
-    {
-        "id": "3",
-        "name": "Nexus Dynamics",
-        "logo": "https://example.com/logo/nexus-dynamics.png",
-        "location": "Seattle, WA",
-        "website": "https://nexusdynamics.io",
-        "industry": "Artificial Intelligence",
-        "jobs": [
-            {
-                "id": "job-011",
-                "title": "Machine Learning Engineer",
-                "bannerImage": "https://example.com/banner/ml-engineer.jpg",
-                "location": "Seattle, WA",
-                "salary": "$135,000 - $170,000",
-                "jobType": "Full-time",
-                "description": "Join our AI research team to develop and deploy cutting-edge machine learning models for a variety of applications.",
-                "requirements": [
-                    "Strong background in machine learning algorithms and deep learning",
-                    "Proficiency in Python and ML libraries (TensorFlow, PyTorch)",
-                    "Experience with model deployment and MLOps",
-                    "Published research or academic background in AI is a plus",
-                    "Excellent problem-solving and collaboration skills"
-                ]
-            },
-            {
-                "id": "job-012",
-                "title": "NLP Scientist",
-                "bannerImage": "https://example.com/banner/nlp-scientist.jpg",
-                "location": "Seattle, WA",
-                "salary": "$140,000 - $185,000",
-                "jobType": "Full-time",
-                "description": "We are seeking an NLP Scientist to work on natural language processing tasks, including text analysis, sentiment analysis, and language models.",
-                "requirements": [
-                    "Expertise in natural language processing techniques and models",
-                    "Experience with NLP libraries (NLTK, spaCy, Hugging Face)",
-                    "Knowledge of large language models (LLMs)",
-                    "Strong coding skills in Python",
-                    "Proven track record of building and deploying NLP systems"
-                ]
-            },
-            {
-                "id": "job-013",
-                "title": "Computer Vision Engineer",
-                "bannerImage": "https://example.com/banner/cv-engineer.jpg",
-                "location": "Seattle, WA",
-                "salary": "$130,000 - $165,000",
-                "jobType": "Full-time",
-                "description": "Develop advanced computer vision algorithms and systems for our autonomous platforms. You will work on image recognition, object detection, and more.",
-                "requirements": [
-                    "Proficiency in computer vision libraries (OpenCV)",
-                    "Experience with deep learning frameworks (PyTorch, TensorFlow)",
-                    "Strong understanding of image processing techniques",
-                    "Knowledge of object detection and segmentation models",
-                    "PhD or Master's degree in Computer Science or a related field"
-                ]
-            },
-            {
-                "id": "job-014",
-                "title": "AI Research Scientist",
-                "bannerImage": "https://example.com/banner/ai-research.jpg",
-                "location": "Seattle, WA",
-                "salary": "$150,000 - $200,000",
-                "jobType": "Full-time",
-                "description": "Our research lab is looking for an AI Research Scientist to explore new frontiers in artificial intelligence and publish groundbreaking work.",
-                "requirements": [
-                    "PhD in AI, Machine Learning, or a related field",
-                    "Strong publication record in top-tier conferences (NeurIPS, ICML)",
-                    "Expertise in one or more AI sub-fields (reinforcement learning, generative models)",
-                    "Ability to work independently on research projects",
-                    "Excellent presentation and writing skills"
-                ]
-            },
-            {
-                "id": "job-015",
-                "title": "Robotics Software Engineer",
-                "bannerImage": "https://example.com/banner/robotics-engineer.jpg",
-                "location": "Seattle, WA",
-                "salary": "$125,000 - $160,000",
-                "jobType": "Full-time",
-                "description": "Join our robotics division to build software that powers our next-generation autonomous robots. You will work on control systems and perception software.",
-                "requirements": [
-                    "Experience with robotics operating systems (ROS)",
-                    "Proficiency in C++ and Python",
-                    "Knowledge of control systems, path planning, and localization",
-                    "Experience with sensor data fusion (LiDAR, cameras)",
-                    "Ability to work with both hardware and software"
-                ]
-            }
+      },
+      {
+        "id": "job-007",
+        "title": "Cloud Architect",
+        "bannerImage": "https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=800&h=400&fit=crop",
+        "location": "Austin, TX",
+        "salary": "$140,000 - $180,000",
+        "jobType": "Full-time",
+        "description": "We are looking for a Cloud Architect to design and implement cloud-based solutions. You will be the go-to expert for our cloud infrastructure strategy.",
+        "requirements": [
+          "Proven experience with AWS, Azure, or GCP",
+          "Expertise in cloud security and cost management",
+          "Strong knowledge of infrastructure as code (Terraform, CloudFormation)",
+          "Ability to design scalable and reliable systems",
+          "Professional cloud certification is a plus"
         ]
-    },
-    {
-        "id": "4",
-        "name": "Quantum Leap Gaming",
-        "logo": "https://example.com/logo/quantum-leap.png",
-        "location": "Los Angeles, CA",
-        "website": "https://quantumleapgaming.com",
-        "industry": "Video Game Development",
-        "jobs": [
-            {
-                "id": "job-016",
-                "title": "Game Programmer",
-                "bannerImage": "https://example.com/banner/game-programmer.jpg",
-                "location": "Los Angeles, CA",
-                "salary": "$90,000 - $120,000",
-                "jobType": "Full-time",
-                "description": "We are seeking a Game Programmer to work on our new AAA title. You will be responsible for implementing game mechanics, physics, and AI.",
-                "requirements": [
-                    "Proficiency in C++ and game engines like Unreal Engine or Unity",
-                    "Experience with game development concepts (rendering, collision)",
-                    "Strong mathematical and problem-solving skills",
-                    "Ability to work in a fast-paced, collaborative environment",
-                    "A passion for video games"
-                ]
-            },
-            {
-                "id": "job-017",
-                "title": "3D Artist",
-                "bannerImage": "https://example.com/banner/3d-artist.jpg",
-                "location": "Los Angeles, CA",
-                "salary": "$75,000 - $100,000",
-                "jobType": "Full-time",
-                "description": "Create stunning 3D models, textures, and environments for our games. You will work closely with the art and design teams.",
-                "requirements": [
-                    "Expertise in 3D modeling software (Blender, Maya, ZBrush)",
-                    "Strong portfolio showcasing realistic or stylized art",
-                    "Knowledge of game asset optimization",
-                    "Experience with texture creation tools (Substance Painter)",
-                    "Ability to adapt to different art styles"
-                ]
-            },
-            {
-                "id": "job-018",
-                "title": "Level Designer",
-                "bannerImage": "https://example.com/banner/level-designer.jpg",
-                "location": "Los Angeles, CA",
-                "salary": "$80,000 - $110,000",
-                "jobType": "Full-time",
-                "description": "Design and build engaging game levels that are fun to explore and challenging to play. You will be responsible for layout, pacing, and player experience.",
-                "requirements": [
-                    "Experience with level editors (Unreal, Unity)",
-                    "Strong understanding of game design principles",
-                    "Ability to prototype and iterate on level designs quickly",
-                    "Knowledge of scripting for in-game events",
-                    "Excellent communication and teamwork skills"
-                ]
-            },
-            {
-                "id": "job-019",
-                "title": "VFX Artist",
-                "bannerImage": "https://example.com/banner/vfx-artist.jpg",
-                "location": "Los Angeles, CA",
-                "salary": "$85,000 - $115,000",
-                "jobType": "Full-time",
-                "description": "Create spectacular visual effects for our games, including explosions, magic spells, and atmospheric effects.",
-                "requirements": [
-                    "Expertise in particle systems and real-time VFX creation",
-                    "Proficiency with VFX software (Houdini, Cascade, Niagara)",
-                    "Strong understanding of color, timing, and composition",
-                    "Experience with shader development is a plus",
-                    "Portfolio demonstrating a range of visual effects"
-                ]
-            },
-            {
-                "id": "job-020",
-                "title": "Technical Artist",
-                "bannerImage": "https://example.com/banner/technical-artist.jpg",
-                "location": "Los Angeles, CA",
-                "salary": "$95,000 - $130,000",
-                "jobType": "Full-time",
-                "description": "Bridge the gap between art and programming. You will optimize art assets, build tools for artists, and solve complex technical art problems.",
-                "requirements": [
-                    "Experience with scripting languages (Python, C#)",
-                    "Knowledge of rendering pipelines and optimization techniques",
-                    "Proficiency with both 3D art software and game engines",
-                    "Strong problem-solving skills",
-                    "Ability to communicate technical concepts to artists"
-                ]
-            }
+      },
+      {
+        "id": "job-008",
+        "title": "Systems Engineer",
+        "bannerImage": "https://images.unsplash.com/photo-1517433456452-f9633a875f6f?w=800&h=400&fit=crop",
+        "location": "Austin, TX",
+        "salary": "$95,000 - $125,000",
+        "jobType": "Full-time",
+        "description": "Design, deploy, and maintain enterprise systems across on-prem and hybrid environments.",
+        "requirements": [
+          "Windows/Linux administration",
+          "Virtualization (VMware/Hyper-V)",
+          "Scripting (PowerShell/Python)",
+          "Backup and DR best practices",
+          "Strong documentation skills"
         ]
-    },
-    {
-        "id": "5",
-        "name": "Aether Data Systems",
-        "logo": "https://example.com/logo/aether-data.png",
-        "location": "Boston, MA",
-        "website": "https://aetherdatasystems.com",
-        "industry": "Data Analytics",
-        "jobs": [
-            {
-                "id": "job-021",
-                "title": "Business Intelligence Analyst",
-                "bannerImage": "https://example.com/banner/bi-analyst.jpg",
-                "location": "Boston, MA",
-                "salary": "$80,000 - $100,000",
-                "jobType": "Full-time",
-                "description": "Analyze business data to provide actionable insights. You will create reports and dashboards that help our clients make informed decisions.",
-                "requirements": [
-                    "Proficiency with BI tools (Tableau, Power BI)",
-                    "Strong SQL skills for data querying and manipulation",
-                    "Experience with data modeling and ETL processes",
-                    "Ability to communicate complex data findings clearly",
-                    "Experience in a business or financial analyst role"
-                ]
-            },
-            {
-                "id": "job-022",
-                "title": "Database Administrator",
-                "bannerImage": "https://example.com/banner/dba.jpg",
-                "location": "Boston, MA",
-                "salary": "$95,000 - $120,000",
-                "jobType": "Full-time",
-                "description": "Manage our database systems, ensuring their performance, security, and availability. You will be responsible for backups, patches, and optimization.",
-                "requirements": [
-                    "Expertise in database systems (MySQL, PostgreSQL, Oracle)",
-                    "Experience with database performance tuning",
-                    "Knowledge of database security and access control",
-                    "Familiarity with cloud-based database services",
-                    "Strong problem-solving skills"
-                ]
-            },
-            {
-                "id": "job-023",
-                "title": "Data Engineer",
-                "bannerImage": "https://example.com/banner/data-engineer.jpg",
-                "location": "Boston, MA",
-                "salary": "$115,000 - $145,000",
-                "jobType": "Full-time",
-                "description": "Design, build, and maintain scalable data pipelines. You will work on our data architecture and ensure data is clean and accessible for analysis.",
-                "requirements": [
-                    "Strong proficiency in Python or Scala",
-                    "Experience with big data technologies (Spark, Hadoop)",
-                    "Knowledge of cloud data services (AWS S3, Redshift, GCP BigQuery)",
-                    "Experience with ETL frameworks (Airflow)",
-                    "Understanding of data warehousing concepts"
-                ]
-            },
-            {
-                "id": "job-024",
-                "title": "Analytics Consultant",
-                "bannerImage": "https://example.com/banner/analytics-consultant.jpg",
-                "location": "Boston, MA",
-                "salary": "$100,000 - $130,000",
-                "jobType": "Full-time",
-                "description": "Work with our clients to understand their data needs and provide expert advice on analytics strategies. You will be the bridge between our tech and client teams.",
-                "requirements": [
-                    "Proven experience in a client-facing role",
-                    "Strong analytical and critical thinking abilities",
-                    "Knowledge of statistical analysis and modeling",
-                    "Ability to lead projects and manage client expectations",
-                    "Excellent presentation and communication skills"
-                ]
-            },
-            {
-                "id": "job-025",
-                "title": "Data Governance Specialist",
-                "bannerImage": "https://example.com/banner/data-governance.jpg",
-                "location": "Boston, MA",
-                "salary": "$90,000 - $110,000",
-                "jobType": "Full-time",
-                "description": "Ensure our data is managed and protected according to regulations and internal policies. You will define and implement data quality and security standards.",
-                "requirements": [
-                    "Experience with data governance frameworks and tools",
-                    "Knowledge of data privacy laws (GDPR, CCPA)",
-                    "Familiarity with data quality and master data management",
-                    "Strong organizational and documentation skills",
-                    "Ability to collaborate with legal and IT teams"
-                ]
-            }
+      },
+      {
+        "id": "job-009",
+        "title": "DevOps Engineer",
+        "bannerImage": "https://images.unsplash.com/photo-1518779578993-ec3579fee39f?w=800&h=400&fit=crop",
+        "location": "Austin, TX",
+        "salary": "$115,000 - $150,000",
+        "jobType": "Full-time",
+        "description": "Automate build, test, and deployment pipelines to accelerate delivery.",
+        "requirements": [
+          "CI/CD tools (Jenkins, GitLab CI)",
+          "Containers and Kubernetes",
+          "IaC with Terraform/Ansible",
+          "Monitoring and logging stacks",
+          "Security in pipelines"
         ]
-    },
-    {
-        "id": "6",
-        "name": "Cybernetic Health Systems",
-        "logo": "https://example.com/logo/cybernetic-health.png",
-        "location": "New York, NY",
-        "website": "https://cybernetichealth.com",
-        "industry": "Healthtech",
-        "jobs": [
-            {
-                "id": "job-026",
-                "title": "Medical Software Developer",
-                "bannerImage": "https://example.com/banner/med-software-dev.jpg",
-                "location": "New York, NY",
-                "salary": "$100,000 - $125,000",
-                "jobType": "Full-time",
-                "description": "Develop and maintain software for medical devices and health information systems. You will work on products that save lives and improve patient care.",
-                "requirements": [
-                    "Experience with C# or Java",
-                    "Knowledge of healthcare IT standards (HL7, DICOM)",
-                    "Familiarity with medical device regulations (FDA)",
-                    "Strong attention to detail and quality assurance",
-                    "Background in biomedical engineering or computer science"
-                ]
-            },
-            {
-                "id": "job-027",
-                "title": "Clinical Informatics Specialist",
-                "bannerImage": "https://example.com/banner/clinical-informatics.jpg",
-                "location": "New York, NY",
-                "salary": "$85,000 - $105,000",
-                "jobType": "Full-time",
-                "description": "Bridge the gap between clinical practice and technology. You will help implement and optimize our electronic health record (EHR) systems.",
-                "requirements": [
-                    "Clinical background (RN, pharmacist) with IT experience",
-                    "Experience with EHR systems (Epic, Cerner)",
-                    "Knowledge of clinical workflows and patient safety",
-                    "Ability to train and support clinical staff",
-                    "Strong communication and interpersonal skills"
-                ]
-            },
-            {
-                "id": "job-028",
-                "title": "Bioinformatics Scientist",
-                "bannerImage": "https://example.com/banner/bioinformatics-scientist.jpg",
-                "location": "New York, NY",
-                "salary": "$110,000 - $140,000",
-                "jobType": "Full-time",
-                "description": "Analyze complex biological and genomic data. You will develop algorithms and software to interpret genetic information for medical research.",
-                "requirements": [
-                    "PhD or Master's in Bioinformatics or a related field",
-                    "Proficiency in Python or R for biological data analysis",
-                    "Experience with genomic data and sequencing technologies",
-                    "Knowledge of bioinformatics tools and databases",
-                    "Strong publication record is a plus"
-                ]
-            },
-            {
-                "id": "job-029",
-                "title": "Health Data Analyst",
-                "bannerImage": "https://example.com/banner/health-data-analyst.jpg",
-                "location": "New York, NY",
-                "salary": "$75,000 - $95,000",
-                "jobType": "Full-time",
-                "description": "Analyze healthcare data to identify trends, optimize operations, and improve patient outcomes. You will work with large datasets and create insightful reports.",
-                "requirements": [
-                    "Experience with healthcare datasets and claims data",
-                    "Proficiency in SQL and data visualization tools (Tableau)",
-                    "Knowledge of healthcare regulations and compliance",
-                    "Strong analytical skills and attention to detail",
-                    "Bachelor's degree in a quantitative field"
-                ]
-            },
-            {
-                "id": "job-030",
-                "title": "IT Project Manager (Health)",
-                "bannerImage": "https://example.com/banner/it-project-manager.jpg",
-                "location": "New York, NY",
-                "salary": "$90,000 - $115,000",
-                "jobType": "Full-time",
-                "description": "Lead and manage IT projects focused on healthcare software implementation and infrastructure upgrades. You will ensure projects are delivered on time and within budget.",
-                "requirements": [
-                    "Proven experience managing IT projects in a healthcare setting",
-                    "Knowledge of project management methodologies (Agile, Scrum)",
-                    "Strong leadership and organizational skills",
-                    "Ability to manage cross-functional teams",
-                    "PMP or similar certification is a plus"
-                ]
-            }
+      },
+      {
+        "id": "job-010",
+        "title": "Cybersecurity Analyst",
+        "bannerImage": "https://images.unsplash.com/photo-1556745750-8d76bdb6984b?w=800&h=400&fit=crop",
+        "location": "Austin, TX",
+        "salary": "$90,000 - $120,000",
+        "jobType": "Full-time",
+        "description": "Monitor threats, investigate incidents, and harden enterprise infrastructure.",
+        "requirements": [
+          "SIEM tooling (Splunk/QRadar)",
+          "Threat hunting and IR playbooks",
+          "Vulnerability scanning/patching",
+          "Knowledge of NIST/ISO frameworks",
+          "Strong analytical mindset"
         ]
-    },
-    {
-        "id": "7",
-        "name": "Aura Financial",
-        "logo": "https://example.com/logo/aura-financial.png",
-        "location": "Chicago, IL",
-        "website": "https://aurafinancial.co",
-        "industry": "Fintech",
-        "jobs": [
-            {
-                "id": "job-031",
-                "title": "Quantitative Analyst",
-                "bannerImage": "https://example.com/banner/quant-analyst.jpg",
-                "location": "Chicago, IL",
-                "salary": "$150,000 - $200,000",
-                "jobType": "Full-time",
-                "description": "Develop and implement quantitative models for trading strategies and risk management. You will work on complex financial problems using advanced mathematics.",
-                "requirements": [
-                    "PhD or Master's in a quantitative field (Math, Physics, Finance)",
-                    "Strong programming skills in Python, C++, or R",
-                    "Experience with financial markets and derivatives",
-                    "Knowledge of statistical modeling and machine learning",
-                    "Excellent problem-solving skills"
-                ]
-            },
-            {
-                "id": "job-032",
-                "title": "Blockchain Developer",
-                "bannerImage": "https://example.com/banner/blockchain-dev.jpg",
-                "location": "Chicago, IL",
-                "salary": "$120,000 - $160,000",
-                "jobType": "Full-time",
-                "description": "Design and build secure, decentralized applications on various blockchain platforms. You will work on smart contracts and blockchain infrastructure.",
-                "requirements": [
-                    "Experience with blockchain platforms (Ethereum, Solana)",
-                    "Proficiency in Solidity, Rust, or Go",
-                    "Knowledge of cryptography and decentralized systems",
-                    "Understanding of smart contract development and security best practices",
-                    "Familiarity with Web3 and decentralized finance (DeFi)"
-                ]
-            },
-            {
-                "id": "job-033",
-                "title": "Risk Analyst",
-                "bannerImage": "https://example.com/banner/risk-analyst.jpg",
-                "location": "Chicago, IL",
-                "salary": "$80,000 - $105,000",
-                "jobType": "Full-time",
-                "description": "Assess and mitigate financial risks for our company and clients. You will analyze market data, credit risk, and operational risk.",
-                "requirements": [
-                    "Experience in financial risk management or a similar role",
-                    "Knowledge of risk modeling and regulatory frameworks",
-                    "Proficiency with data analysis tools and Excel",
-                    "Strong attention to detail and analytical skills",
-                    "Bachelor's degree in finance, economics, or a related field"
-                ]
-            },
-            {
-                "id": "job-034",
-                "title": "Full-stack Developer",
-                "bannerImage": "https://example.com/banner/fullstack-dev.jpg",
-                "location": "Chicago, IL",
-                "salary": "$110,000 - $140,000",
-                "jobType": "Full-time",
-                "description": "Build and maintain both the frontend and backend of our fintech applications. You will work on everything from user interfaces to payment processing systems.",
-                "requirements": [
-                    "Proficiency in a full-stack framework (e.g., MERN, LAMP)",
-                    "Experience with both frontend (React, Angular) and backend (Node.js, Python) technologies",
-                    "Knowledge of database design and management",
-                    "Familiarity with cloud services (AWS, Azure)",
-                    "Ability to work in a fast-paced environment"
-                ]
-            },
-            {
-                "id": "job-035",
-                "title": "Financial Software Engineer",
-                "bannerImage": "https://example.com/banner/financial-software-eng.jpg",
-                "location": "Chicago, IL",
-                "salary": "$125,000 - $160,000",
-                "jobType": "Full-time",
-                "description": "Develop high-performance trading platforms and financial software. This role requires a deep understanding of financial systems and low-latency programming.",
-                "requirements": [
-                    "Experience with low-latency programming in C++ or Java",
-                    "Knowledge of financial protocols (FIX)",
-                    "Understanding of financial concepts (market data, order types)",
-                    "Experience with distributed systems and concurrency",
-                    "Background in finance or trading is a major plus"
-                ]
-            }
+      },
+      {
+        "id": "job-011",
+        "title": "Storage Engineer",
+        "bannerImage": "https://images.unsplash.com/photo-1554277267-ef9c7a3b3d35?w=800&h=400&fit=crop",
+        "location": "Austin, TX",
+        "salary": "$100,000 - $130,000",
+        "jobType": "Full-time",
+        "description": "Design and support SAN/NAS solutions for large-scale workloads.",
+        "requirements": [
+          "Experience with Dell storage products",
+          "FC/iSCSI protocols and zoning",
+          "Capacity planning and performance tuning",
+          "Backup/archival strategies",
+          "Scripting for automation"
         ]
-    },
-    {
-        "id": "8",
-        "name": "Terra Sustainable Tech",
-        "logo": "https://example.com/logo/terra-tech.png",
-        "location": "Denver, CO",
-        "website": "https://terrasustain.io",
-        "industry": "Cleantech",
-        "jobs": [
-            {
-                "id": "job-036",
-                "title": "Energy Systems Engineer",
-                "bannerImage": "https://example.com/banner/energy-systems-eng.jpg",
-                "location": "Denver, CO",
-                "salary": "$95,000 - $120,000",
-                "jobType": "Full-time",
-                "description": "Design and analyze renewable energy systems, including solar, wind, and battery storage. You will work on projects that directly contribute to a cleaner planet.",
-                "requirements": [
-                    "Experience with renewable energy technologies and systems",
-                    "Proficiency in simulation software (MATLAB, Simulink)",
-                    "Knowledge of power electronics and grid integration",
-                    "Strong analytical and problem-solving skills",
-                    "Bachelor's or Master's degree in engineering"
-                ]
-            },
-            {
-                "id": "job-037",
-                "title": "IoT Developer",
-                "bannerImage": "https://example.com/banner/iot-developer.jpg",
-                "location": "Denver, CO",
-                "salary": "$100,000 - $130,000",
-                "jobType": "Full-time",
-                "description": "Develop software for our smart home and industrial IoT devices. You will work on embedded systems and the cloud platforms that connect them.",
-                "requirements": [
-                    "Experience with embedded systems and C/C++",
-                    "Knowledge of IoT protocols (MQTT, CoAP)",
-                    "Experience with cloud IoT platforms (AWS IoT, Azure IoT Hub)",
-                    "Familiarity with hardware-software integration",
-                    "Ability to work on a team and solve complex issues"
-                ]
-            },
-            {
-                "id": "job-038",
-                "title": "Environmental Scientist",
-                "bannerImage": "https://example.com/banner/environmental-scientist.jpg",
-                "location": "Denver, CO",
-                "salary": "$80,000 - $100,000",
-                "jobType": "Full-time",
-                "description": "Analyze environmental data to assess the impact of our projects. You will use data to inform our sustainability strategies and reports.",
-                "requirements": [
-                    "Bachelor's or Master's degree in Environmental Science or a related field",
-                    "Experience with environmental data analysis and GIS software",
-                    "Knowledge of environmental regulations and sustainability standards",
-                    "Strong research and report writing skills",
-                    "Familiarity with climate change models"
-                ]
-            },
-            {
-                "id": "job-039",
-                "title": "Product Manager (Cleantech)",
-                "bannerImage": "https://example.com/banner/product-manager-clean.jpg",
-                "location": "Denver, CO",
-                "salary": "$115,000 - $145,000",
-                "jobType": "Full-time",
-                "description": "Lead the development of our cleantech products from concept to launch. You will define product roadmaps and work closely with engineering and sales teams.",
-                "requirements": [
-                    "Proven experience as a Product Manager, preferably in a tech-related field",
-                    "Strong understanding of the cleantech or energy sector",
-                    "Excellent communication and leadership skills",
-                    "Ability to define product requirements and user stories",
-                    "Data-driven decision-making abilities"
-                ]
-            },
-            {
-                "id": "job-040",
-                "title": "Software Developer (Energy Grid)",
-                "bannerImage": "https://example.com/banner/software-dev-energy.jpg",
-                "location": "Denver, CO",
-                "salary": "$105,000 - $135,000",
-                "jobType": "Full-time",
-                "description": "Develop software for monitoring and optimizing smart grids. This role involves building applications that manage energy distribution and consumption.",
-                "requirements": [
-                    "Proficiency in Python or Java",
-                    "Experience with real-time data processing and time-series databases",
-                    "Knowledge of power systems and energy markets",
-                    "Familiarity with cloud computing and microservices",
-                    "Ability to write robust and scalable code"
-                ]
-            }
+      },
+      {
+        "id": "job-012",
+        "title": "IT Project Manager",
+        "bannerImage": "https://images.unsplash.com/photo-1552409905-451c1f1c1b54?w=800&h=400&fit=crop",
+        "location": "Austin, TX",
+        "salary": "$105,000 - $135,000",
+        "jobType": "Full-time",
+        "description": "Lead cross-functional IT initiatives from planning to delivery.",
+        "requirements": [
+          "PMP or equivalent experience",
+          "Risk, scope, and stakeholder management",
+          "Budgeting and vendor coordination",
+          "Agile/Waterfall methodologies",
+          "Excellent communication skills"
         ]
-    },
-    {
-        "id": "9",
-        "name": "Cosmic Creative Agency",
-        "logo": "https://example.com/logo/cosmic-creative.png",
-        "location": "Miami, FL",
-        "website": "https://cosmiccreative.com",
-        "industry": "Digital Marketing",
-        "jobs": [
-            {
-                "id": "job-041",
-                "title": "Social Media Manager",
-                "bannerImage": "https://example.com/banner/social-media-manager.jpg",
-                "location": "Miami, FL",
-                "salary": "$60,000 - $80,000",
-                "jobType": "Full-time",
-                "description": "Manage our clients' social media presence, create engaging content, and grow their online communities. You will be a key part of our digital strategy team.",
-                "requirements": [
-                    "Proven experience in social media management",
-                    "Knowledge of social media platforms and analytics tools",
-                    "Strong content creation and copywriting skills",
-                    "Ability to develop and execute social media campaigns",
-                    "Creative and a self-starter"
-                ]
-            },
-            {
-                "id": "job-042",
-                "title": "SEO Specialist",
-                "bannerImage": "https://example.com/banner/seo-specialist.jpg",
-                "location": "Miami, FL",
-                "salary": "$70,000 - $95,000",
-                "jobType": "Full-time",
-                "description": "Optimize our clients' websites for search engines to increase organic traffic and improve rankings. You will conduct keyword research and technical audits.",
-                "requirements": [
-                    "Strong knowledge of SEO best practices and algorithms",
-                    "Experience with SEO tools (SEMrush, Ahrefs, Moz)",
-                    "Familiarity with technical SEO and link building",
-                    "Excellent analytical and problem-solving skills",
-                    "Ability to stay up-to-date with industry trends"
-                ]
-            },
-            {
-                "id": "job-043",
-                "title": "PPC Manager",
-                "bannerImage": "https://example.com/banner/ppc-manager.jpg",
-                "location": "Miami, FL",
-                "salary": "$75,000 - $100,000",
-                "jobType": "Full-time",
-                "description": "Manage and optimize pay-per-click advertising campaigns across various platforms (Google Ads, Bing Ads). You will focus on maximizing ROI for our clients.",
-                "requirements": [
-                    "Proven experience managing PPC campaigns",
-                    "Expertise in Google Ads and Google Analytics",
-                    "Knowledge of bid management and campaign optimization techniques",
-                    "Strong analytical skills and attention to detail",
-                    "Google Ads certification is a plus"
-                ]
-            },
-            {
-                "id": "job-044",
-                "title": "Content Strategist",
-                "bannerImage": "https://example.com/banner/content-strategist.jpg",
-                "location": "Miami, FL",
-                "salary": "$65,000 - $85,000",
-                "jobType": "Full-time",
-                "description": "Develop and implement content strategies that align with our clients' business goals. You will oversee content creation, from blog posts to videos.",
-                "requirements": [
-                    "Experience in content strategy and planning",
-                    "Excellent writing and editing skills",
-                    "Ability to research and understand target audiences",
-                    "Familiarity with content management systems (CMS)",
-                    "Creative and strategic thinking"
-                ]
-            },
-            {
-                "id": "job-045",
-                "title": "Email Marketing Specialist",
-                "bannerImage": "https://example.com/banner/email-marketing.jpg",
-                "location": "Miami, FL",
-                "salary": "$60,000 - $80,000",
-                "jobType": "Full-time",
-                "description": "Create and execute email marketing campaigns that drive engagement and conversions. You will manage email lists, design templates, and analyze performance.",
-                "requirements": [
-                    "Experience with email marketing platforms (Mailchimp, HubSpot)",
-                    "Knowledge of A/B testing and segmentation",
-                    "Strong copywriting and design skills",
-                    "Understanding of email deliverability and compliance (CAN-SPAM)",
-                    "Analytical skills to track and report on campaign results"
-                ]
-            }
+      }
+    ]
+  },
+  {
+    "id": "3",
+    "name": "OpenAI",
+    "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4d/OpenAI_Logo.svg/2560px-OpenAI_Logo.svg.png",
+    "location": "San Francisco, CA",
+    "website": "https://openai.com",
+    "industry": "Artificial Intelligence",
+    "jobs": [
+      {
+        "id": "job-011",
+        "title": "Machine Learning Engineer",
+        "bannerImage": "https://images.unsplash.com/photo-1555949963-aa79dcee981c?w=800&h=400&fit=crop",
+        "location": "San Francisco, CA",
+        "salary": "$180,000 - $250,000",
+        "jobType": "Full-time",
+        "description": "Join our AI research team to develop and deploy cutting-edge machine learning models for a variety of applications.",
+        "requirements": [
+          "Strong background in machine learning algorithms and deep learning",
+          "Proficiency in Python and ML libraries (TensorFlow, PyTorch)",
+          "Experience with model deployment and MLOps",
+          "Published research or academic background in AI is a plus",
+          "Excellent problem-solving and collaboration skills"
         ]
-    },
-    {
-        "id": "10",
-        "name": "Horizon Robotics",
-        "logo": "https://example.com/logo/horizon-robotics.png",
-        "location": "Pittsburgh, PA",
-        "website": "https://horizonrobotics.ai",
-        "industry": "Robotics",
-        "jobs": [
-            {
-                "id": "job-046",
-                "title": "Embedded Software Engineer",
-                "bannerImage": "https://example.com/banner/embedded-engineer.jpg",
-                "location": "Pittsburgh, PA",
-                "salary": "$110,000 - $140,000",
-                "jobType": "Full-time",
-                "description": "Develop low-level software for our robotic systems. You will work on firmware, drivers, and real-time operating systems.",
-                "requirements": [
-                    "Proficiency in C/C++ for embedded systems",
-                    "Experience with microcontrollers (ARM, AVR)",
-                    "Knowledge of real-time operating systems (RTOS)",
-                    "Familiarity with hardware communication protocols (I2C, SPI)",
-                    "Strong debugging and troubleshooting skills"
-                ]
-            },
-            {
-                "id": "job-047",
-                "title": "Mechanical Engineer",
-                "bannerImage": "https://example.com/banner/mechanical-engineer.jpg",
-                "location": "Pittsburgh, PA",
-                "salary": "$90,000 - $115,000",
-                "jobType": "Full-time",
-                "description": "Design and build the mechanical components of our robots. You will be involved in the entire product lifecycle, from concept to manufacturing.",
-                "requirements": [
-                    "Proficiency in CAD software (SolidWorks, Fusion 360)",
-                    "Experience with robotics, mechatronics, or automation",
-                    "Knowledge of materials science and manufacturing processes",
-                    "Strong analytical and design skills",
-                    "Bachelor's or Master's degree in Mechanical Engineering"
-                ]
-            },
-            {
-                "id": "job-048",
-                "title": "Controls Engineer",
-                "bannerImage": "https://example.com/banner/controls-engineer.jpg",
-                "location": "Pittsburgh, PA",
-                "salary": "$105,000 - $135,000",
-                "jobType": "Full-time",
-                "description": "Design and implement control systems for our robotic arms and mobile platforms. You will work on motion planning and dynamic control.",
-                "requirements": [
-                    "Experience with control theory and robotics",
-                    "Proficiency in MATLAB/Simulink or Python",
-                    "Knowledge of ROS and real-time control systems",
-                    "Strong mathematical and analytical skills",
-                    "Ability to work with both hardware and software"
-                ]
-            },
-            {
-                "id": "job-049",
-                "title": "Perception Engineer",
-                "bannerImage": "https://example.com/banner/perception-engineer.jpg",
-                "location": "Pittsburgh, PA",
-                "salary": "$120,000 - $150,000",
-                "jobType": "Full-time",
-                "description": "Develop perception systems that allow our robots to understand their environment. You will work on sensor fusion, SLAM, and object recognition.",
-                "requirements": [
-                    "Experience with computer vision and sensor data processing",
-                    "Proficiency in C++ and Python",
-                    "Knowledge of point cloud libraries (PCL)",
-                    "Experience with LiDAR, cameras, and other sensors",
-                    "PhD or Master's in a relevant field"
-                ]
-            },
-            {
-                "id": "job-050",
-                "title": "AI/ML Engineer (Robotics)",
-                "bannerImage": "https://example.com/banner/ai-ml-robotics.jpg",
-                "location": "Pittsburgh, PA",
-                "salary": "$125,000 - $160,000",
-                "jobType": "Full-time",
-                "description": "Apply machine learning to solve complex robotics problems. You will train models for manipulation, navigation, and human-robot interaction.",
-                "requirements": [
-                    "Strong background in machine learning and deep learning",
-                    "Experience with PyTorch or TensorFlow",
-                    "Knowledge of reinforcement learning and imitation learning",
-                    "Familiarity with robotics simulators (Gazebo)",
-                    "Ability to deploy models on embedded hardware"
-                ]
-            }
+      },
+      {
+        "id": "job-012",
+        "title": "AI Research Scientist",
+        "bannerImage": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=800&h=400&fit=crop",
+        "location": "San Francisco, CA",
+        "salary": "$200,000 - $350,000",
+        "jobType": "Full-time",
+        "description": "Our research lab is looking for an AI Research Scientist to explore new frontiers in artificial intelligence and publish groundbreaking work.",
+        "requirements": [
+          "PhD in AI, Machine Learning, or a related field",
+          "Strong publication record in top-tier conferences (NeurIPS, ICML)",
+          "Expertise in one or more AI sub-fields (reinforcement learning, generative models)",
+          "Ability to work independently on research projects",
+          "Excellent presentation and writing skills"
         ]
-    }
+      },
+      {
+        "id": "job-013",
+        "title": "Applied Scientist, Safety",
+        "bannerImage": "https://images.unsplash.com/photo-1520607162513-77705c0f0d4a?w=800&h=400&fit=crop",
+        "location": "San Francisco, CA",
+        "salary": "$190,000 - $280,000",
+        "jobType": "Full-time",
+        "description": "Research and build techniques to align large models with human intent and improve reliability.",
+        "requirements": [
+          "Experience with RLHF or preference modeling",
+          "Strong Python/Deep Learning background",
+          "Safety evaluations and red-teaming",
+          "Experiment design and causal inference",
+          "Publications in safety/ethics preferred"
+        ]
+      },
+      {
+        "id": "job-014",
+        "title": "MLOps Engineer",
+        "bannerImage": "https://images.unsplash.com/photo-1518770660439-4636190af475?w=800&h=400&fit=crop",
+        "location": "San Francisco, CA",
+        "salary": "$170,000 - $230,000",
+        "jobType": "Full-time",
+        "description": "Own training and serving infrastructure for large-scale model workloads.",
+        "requirements": [
+          "Kubernetes, distributed systems experience",
+          "GPU scheduling and optimization",
+          "Model versioning and feature stores",
+          "Observability for ML systems",
+          "Strong software engineering skills"
+        ]
+      },
+      {
+        "id": "job-015",
+        "title": "Prompt Engineer",
+        "bannerImage": "https://images.unsplash.com/photo-1518779578993-ec3579fee39f?w=800&h=400&fit=crop",
+        "location": "San Francisco, CA",
+        "salary": "$160,000 - $210,000",
+        "jobType": "Full-time",
+        "description": "Design prompt strategies and evaluation suites to improve model outputs across domains.",
+        "requirements": [
+          "Excellent writing and analytical skills",
+          "Experience with LLM tooling and evals",
+          "A/B testing and metrics design",
+          "Scripting in Python/JS",
+          "Cross-functional collaboration"
+        ]
+      },
+      {
+        "id": "job-016",
+        "title": "Research Engineer, Multimodal",
+        "bannerImage": "https://images.unsplash.com/photo-1518770660439-4636190af475?w=800&h=400&fit=crop",
+        "location": "San Francisco, CA",
+        "salary": "$185,000 - $260,000",
+        "jobType": "Full-time",
+        "description": "Prototype and scale multimodal (text/image/audio/video) models and datasets.",
+        "requirements": [
+          "PyTorch/JAX and large-scale training",
+          "Data curation and augmentation pipelines",
+          "Knowledge of vision or speech models",
+          "Evaluation and benchmarking",
+          "Strong coding practices"
+        ]
+      },
+      {
+        "id": "job-017",
+        "title": "Policy Researcher",
+        "bannerImage": "https://images.unsplash.com/photo-1523246191510-4b7f06f34d5a?w=800&h=400&fit=crop",
+        "location": "San Francisco, CA",
+        "salary": "$150,000 - $200,000",
+        "jobType": "Full-time",
+        "description": "Study the societal impacts of AI and help shape responsible deployment guidelines.",
+        "requirements": [
+          "Background in public policy or economics",
+          "Research design and quantitative skills",
+          "Experience engaging with regulators",
+          "Clear writing for technical and public audiences",
+          "Interest in AI governance"
+        ]
+      },
+      {
+        "id": "job-018",
+        "title": "Technical Program Manager, Research",
+        "bannerImage": "https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=800&h=400&fit=crop",
+        "location": "San Francisco, CA",
+        "salary": "$160,000 - $220,000",
+        "jobType": "Full-time",
+        "description": "Drive complex cross-team milestones for model training and launches.",
+        "requirements": [
+          "Program management in ML/infra domains",
+          "Roadmapping and risk management",
+          "Strong stakeholder communication",
+          "Data-driven decision making",
+          "Hands-on technical familiarity"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "4",
+    "name": "Epic Games",
+    "logo": "https://logos-world.net/wp-content/uploads/2021/12/Epic-Games-Logo.png",
+    "location": "Cary, NC",
+    "website": "https://www.epicgames.com",
+    "industry": "Video Game Development",
+    "jobs": [
+      {
+        "id": "job-016",
+        "title": "Game Programmer",
+        "bannerImage": "https://images.unsplash.com/photo-1542751371-adc38448a05e?w=800&h=400&fit=crop",
+        "location": "Cary, NC",
+        "salary": "$120,000 - $180,000",
+        "jobType": "Full-time",
+        "description": "We are seeking a Game Programmer to work on our new AAA title. You will be responsible for implementing game mechanics, physics, and AI.",
+        "requirements": [
+          "Proficiency in C++ and game engines like Unreal Engine",
+          "Experience with game development concepts (rendering, collision)",
+          "Strong mathematical and problem-solving skills",
+          "Ability to work in a fast-paced, collaborative environment",
+          "A passion for video games"
+        ]
+      },
+      {
+        "id": "job-017",
+        "title": "3D Artist",
+        "bannerImage": "https://images.unsplash.com/photo-1633356122544-f134324a6cee?w=800&h=400&fit=crop",
+        "location": "Cary, NC",
+        "salary": "$90,000 - $130,000",
+        "jobType": "Full-time",
+        "description": "Create stunning 3D models, textures, and environments for our games. You will work closely with the art and design teams.",
+        "requirements": [
+          "Expertise in 3D modeling software (Blender, Maya, ZBrush)",
+          "Strong portfolio showcasing realistic or stylized art",
+          "Knowledge of game asset optimization",
+          "Experience with texture creation tools (Substance Painter)",
+          "Ability to adapt to different art styles"
+        ]
+      },
+      {
+        "id": "job-018",
+        "title": "Level Designer",
+        "bannerImage": "https://images.unsplash.com/photo-1509233725247-49e657c54213?w=800&h=400&fit=crop",
+        "location": "Cary, NC",
+        "salary": "$95,000 - $135,000",
+        "jobType": "Full-time",
+        "description": "Design engaging levels and gameplay experiences that balance flow, challenge, and narrative.",
+        "requirements": [
+          "Experience designing levels in Unreal Engine",
+          "Strong sense of pacing and player psychology",
+          "Scripting with Blueprints",
+          "Cross-team collaboration with art and engineering",
+          "Portfolio of shipped or prototype levels"
+        ]
+      },
+      {
+        "id": "job-019",
+        "title": "Technical Artist",
+        "bannerImage": "https://images.unsplash.com/photo-1517694712202-14dd9538aa97?w=800&h=400&fit=crop",
+        "location": "Cary, NC",
+        "salary": "$105,000 - $145,000",
+        "jobType": "Full-time",
+        "description": "Bridge art and engineering to optimize pipelines, shaders, and performance.",
+        "requirements": [
+          "Shader development experience",
+          "Profiling and optimization skills",
+          "Scripting (Python/MaxScript)",
+          "Understanding of PBR and lighting",
+          "Excellent problem-solving"
+        ]
+      },
+      {
+        "id": "job-020",
+        "title": "Animation Programmer",
+        "bannerImage": "https://images.unsplash.com/photo-1526948128573-703ee1aeb6fa?w=800&h=400&fit=crop",
+        "location": "Cary, NC",
+        "salary": "$115,000 - $160,000",
+        "jobType": "Full-time",
+        "description": "Implement animation systems including IK, locomotion, and state machines.",
+        "requirements": [
+          "C++ and Unreal animation systems",
+          "Knowledge of motion matching/IK",
+          "Performance and memory constraints",
+          "Collaboration with animators",
+          "Strong math skills"
+        ]
+      },
+      {
+        "id": "job-021",
+        "title": "Gameplay QA Lead",
+        "bannerImage": "https://images.unsplash.com/photo-1518779578993-ec3579fee39f?w=800&h=400&fit=crop",
+        "location": "Cary, NC",
+        "salary": "$85,000 - $115,000",
+        "jobType": "Full-time",
+        "description": "Lead test strategy, automation, and reporting for gameplay features.",
+        "requirements": [
+          "Experience leading QA teams",
+          "Test automation frameworks",
+          "Bug tracking and triage skills",
+          "Clear reporting and metrics",
+          "Multiplatform testing knowledge"
+        ]
+      },
+      {
+        "id": "job-022",
+        "title": "Audio Designer",
+        "bannerImage": "https://images.unsplash.com/photo-1511379938547-c1f69419868d?w=800&h=400&fit=crop",
+        "location": "Cary, NC",
+        "salary": "$90,000 - $125,000",
+        "jobType": "Full-time",
+        "description": "Create sound effects, implement Wwise banks, and mix audio for immersive experiences.",
+        "requirements": [
+          "Experience with Wwise/Unreal audio pipeline",
+          "Field recording and Foley",
+          "Audio middleware implementation",
+          "Understanding of loudness/occlusion",
+          "Portfolio of shipped titles or reels"
+        ]
+      },
+      {
+        "id": "job-023",
+        "title": "Live Ops Producer",
+        "bannerImage": "https://images.unsplash.com/photo-1487014679447-9f8336841d58?w=800&h=400&fit=crop",
+        "location": "Cary, NC",
+        "salary": "$100,000 - $140,000",
+        "jobType": "Full-time",
+        "description": "Plan, run, and analyze live events, content drops, and seasonal updates.",
+        "requirements": [
+          "Experience in live service operations",
+          "Strong analytical and planning skills",
+          "Cross-functional coordination",
+          "A/B testing and KPI ownership",
+          "Player-first mindset"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "5",
+    "name": "Snowflake",
+    "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/ff/Snowflake_Logo.svg/2560px-Snowflake_Logo.svg.png",
+    "location": "San Mateo, CA",
+    "website": "https://www.snowflake.com",
+    "industry": "Data Analytics",
+    "jobs": [
+      {
+        "id": "job-021",
+        "title": "Data Engineer",
+        "bannerImage": "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&h=400&fit=crop",
+        "location": "San Mateo, CA",
+        "salary": "$140,000 - $180,000",
+        "jobType": "Full-time",
+        "description": "Design, build, and maintain scalable data pipelines. You will work on our data architecture and ensure data is clean and accessible for analysis.",
+        "requirements": [
+          "Strong proficiency in Python or Scala",
+          "Experience with big data technologies (Spark, Hadoop)",
+          "Knowledge of cloud data services (AWS S3, Redshift, GCP BigQuery)",
+          "Experience with ETL frameworks (Airflow)",
+          "Understanding of data warehousing concepts"
+        ]
+      },
+      {
+        "id": "job-022",
+        "title": "Database Administrator",
+        "bannerImage": "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800&h=400&fit=crop",
+        "location": "San Mateo, CA",
+        "salary": "$120,000 - $150,000",
+        "jobType": "Full-time",
+        "description": "Manage our database systems, ensuring their performance, security, and availability. You will be responsible for backups, patches, and optimization.",
+        "requirements": [
+          "Expertise in database systems (MySQL, PostgreSQL, Snowflake)",
+          "Experience with database performance tuning",
+          "Knowledge of database security and access control",
+          "Familiarity with cloud-based database services",
+          "Strong problem-solving skills"
+        ]
+      },
+      {
+        "id": "job-023",
+        "title": "Analytics Engineer",
+        "bannerImage": "https://images.unsplash.com/photo-1517433456452-f9633a875f6f?w=800&h=400&fit=crop",
+        "location": "San Mateo, CA",
+        "salary": "$135,000 - $170,000",
+        "jobType": "Full-time",
+        "description": "Model clean, reliable datasets and build reusable metrics layers.",
+        "requirements": [
+          "SQL expertise and dbt experience",
+          "Data modeling (Kimball/Star schema)",
+          "Version control and CI for analytics",
+          "Dashboards and documentation",
+          "Strong stakeholder communication"
+        ]
+      },
+      {
+        "id": "job-024",
+        "title": "Platform Engineer",
+        "bannerImage": "https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=800&h=400&fit=crop",
+        "location": "San Mateo, CA",
+        "salary": "$150,000 - $190,000",
+        "jobType": "Full-time",
+        "description": "Build core services powering data storage, compute, and security.",
+        "requirements": [
+          "Strong Java/Scala/C++ skills",
+          "Distributed systems and concurrency",
+          "Cloud-native design patterns",
+          "Observability and reliability",
+          "Performance tuning"
+        ]
+      },
+      {
+        "id": "job-025",
+        "title": "Data Scientist",
+        "bannerImage": "https://images.unsplash.com/photo-1517148815978-75f6acaaf32c?w=800&h=400&fit=crop",
+        "location": "San Mateo, CA",
+        "salary": "$145,000 - $185,000",
+        "jobType": "Full-time",
+        "description": "Develop statistical and ML models to optimize product and GTM strategy.",
+        "requirements": [
+          "Python/R and SQL proficiency",
+          "Experimentation and causal inference",
+          "Feature engineering at scale",
+          "Visualization and storytelling",
+          "Experience with cloud data warehouses"
+        ]
+      },
+      {
+        "id": "job-026",
+        "title": "Solutions Architect",
+        "bannerImage": "https://images.unsplash.com/photo-1487058792275-0ad4aaf24ca7?w=800&h=400&fit=crop",
+        "location": "San Mateo, CA",
+        "salary": "$150,000 - $200,000",
+        "jobType": "Full-time",
+        "description": "Guide enterprise customers in architecting scalable analytics on Snowflake.",
+        "requirements": [
+          "Customer-facing architecture experience",
+          "Data warehousing best practices",
+          "Security and governance knowledge",
+          "Excellent presentation skills",
+          "Certifications a plus"
+        ]
+      },
+      {
+        "id": "job-027",
+        "title": "Product Manager, Data Sharing",
+        "bannerImage": "https://images.unsplash.com/photo-1551836022-4c4c79ecde51?w=800&h=400&fit=crop",
+        "location": "San Mateo, CA",
+        "salary": "$155,000 - $205,000",
+        "jobType": "Full-time",
+        "description": "Own features enabling secure, governed data collaboration.",
+        "requirements": [
+          "3+ years PM in data products",
+          "Understanding of governance and privacy",
+          "Strong analytical and UX instincts",
+          "Roadmap ownership and execution",
+          "Great cross-functional leadership"
+        ]
+      },
+      {
+        "id": "job-028",
+        "title": "Technical Writer",
+        "bannerImage": "https://images.unsplash.com/photo-1515378791036-0648a3ef77b2?w=800&h=400&fit=crop",
+        "location": "San Mateo, CA",
+        "salary": "$110,000 - $140,000",
+        "jobType": "Full-time",
+        "description": "Create clear docs, tutorials, and examples for developers and data teams.",
+        "requirements": [
+          "Technical writing portfolio",
+          "SQL and basic scripting knowledge",
+          "Doc tooling and information architecture",
+          "Cross-team collaboration",
+          "Attention to detail and clarity"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "6",
+    "name": "Moderna",
+    "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6a/Moderna_logo.svg/2560px-Moderna_logo.svg.png",
+    "location": "Cambridge, MA",
+    "website": "https://www.modernatx.com",
+    "industry": "Biotech/Healthtech",
+    "jobs": [
+      {
+        "id": "job-026",
+        "title": "Bioinformatics Scientist",
+        "bannerImage": "https://images.unsplash.com/photo-1532187863486-abf9dbad1b69?w=800&h=400&fit=crop",
+        "location": "Cambridge, MA",
+        "salary": "$130,000 - $170,000",
+        "jobType": "Full-time",
+        "description": "Analyze complex biological and genomic data. You will develop algorithms and software to interpret genetic information for medical research.",
+        "requirements": [
+          "PhD or Master's in Bioinformatics or a related field",
+          "Proficiency in Python or R for biological data analysis",
+          "Experience with genomic data and sequencing technologies",
+          "Knowledge of bioinformatics tools and databases",
+          "Strong publication record is a plus"
+        ]
+      },
+      {
+        "id": "job-027",
+        "title": "Clinical Data Analyst",
+        "bannerImage": "https://images.unsplash.com/photo-1559757148-5c350d0d3c56?w=800&h=400&fit=crop",
+        "location": "Cambridge, MA",
+        "salary": "$90,000 - $120,000",
+        "jobType": "Full-time",
+        "description": "Analyze clinical trial data to support drug development and regulatory submissions. You will work with large datasets to derive meaningful insights.",
+        "requirements": [
+          "Experience with clinical trial data and statistical analysis",
+          "Proficiency in SAS, R, or Python",
+          "Knowledge of Good Clinical Practice (GCP) guidelines",
+          "Strong analytical skills and attention to detail",
+          "Master's degree in biostatistics or related field"
+        ]
+      },
+      {
+        "id": "job-028",
+        "title": "Computational Biologist",
+        "bannerImage": "https://images.unsplash.com/photo-1559757175-08fda9b5aa42?w=800&h=400&fit=crop",
+        "location": "Cambridge, MA",
+        "salary": "$140,000 - $185,000",
+        "jobType": "Full-time",
+        "description": "Develop models to understand immune responses and optimize mRNA designs.",
+        "requirements": [
+          "PhD or MS in computational biology",
+          "Python/R and statistics",
+          "Single-cell and NGS analysis",
+          "Experience with cloud pipelines",
+          "Strong collaboration with wet-lab teams"
+        ]
+      },
+      {
+        "id": "job-029",
+        "title": "Biostatistician",
+        "bannerImage": "https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?w=800&h=400&fit=crop",
+        "location": "Cambridge, MA",
+        "salary": "$130,000 - $175,000",
+        "jobType": "Full-time",
+        "description": "Design clinical studies, author SAPs, and analyze efficacy/safety endpoints.",
+        "requirements": [
+          "MS/PhD in Biostatistics/Statistics",
+          "Clinical trial statistics experience",
+          "SAS and R proficiency",
+          "Regulatory submission familiarity",
+          "Excellent communication"
+        ]
+      },
+      {
+        "id": "job-030",
+        "title": "Machine Learning Engineer (Bio)",
+        "bannerImage": "https://images.unsplash.com/photo-1555949963-aa79dcee981c?w=800&h=400&fit=crop",
+        "location": "Cambridge, MA",
+        "salary": "$150,000 - $200,000",
+        "jobType": "Full-time",
+        "description": "Build ML models for sequence optimization, structure prediction, and QC.",
+        "requirements": [
+          "Deep learning frameworks (PyTorch/TensorFlow)",
+          "Experience with biological datasets",
+          "MLOps for scientific computing",
+          "Experiment tracking and reproducibility",
+          "Strong software engineering skills"
+        ]
+      },
+      {
+        "id": "job-031",
+        "title": "LIMS Engineer",
+        "bannerImage": "https://images.unsplash.com/photo-1532634896-26909d0d4b6a?w=800&h=400&fit=crop",
+        "location": "Cambridge, MA",
+        "salary": "$115,000 - $150,000",
+        "jobType": "Full-time",
+        "description": "Implement and maintain laboratory information systems across R&D and GxP.",
+        "requirements": [
+          "Experience with LIMS/ELN platforms",
+          "GxP and CSV knowledge",
+          "Integration with instruments/ETL",
+          "Scripting for automation",
+          "Strong stakeholder management"
+        ]
+      },
+      {
+        "id": "job-032",
+        "title": "Clinical Programmer",
+        "bannerImage": "https://images.unsplash.com/photo-1582719478185-2f56f6f8e9da?w=800&h=400&fit=crop",
+        "location": "Cambridge, MA",
+        "salary": "$110,000 - $145,000",
+        "jobType": "Full-time",
+        "description": "Develop SDTM/ADaM datasets and TLFs supporting submissions.",
+        "requirements": [
+          "Advanced SAS programming",
+          "CDISC standards expertise",
+          "QC and validation processes",
+          "Experience with eCRF/EDC data",
+          "Attention to detail"
+        ]
+      },
+      {
+        "id": "job-033",
+        "title": "Regulatory Affairs Specialist",
+        "bannerImage": "https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?w=800&h=400&fit=crop",
+        "location": "Cambridge, MA",
+        "salary": "$120,000 - $155,000",
+        "jobType": "Full-time",
+        "description": "Prepare and manage IND/CTA submissions and agency interactions.",
+        "requirements": [
+          "Experience with FDA/EMA processes",
+          "Strong writing and documentation",
+          "Cross-functional coordination",
+          "Knowledge of ICH guidelines",
+          "Detail-oriented mindset"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "7",
+    "name": "Coinbase",
+    "logo": "https://images.ctfassets.net/q5ulk4bp65r7/3TBS4oVkD1ghowTqVQJlqj/2dfd4ea3b623a7c0d8deb2ff445dee9e/Consumer_Wordmark.svg",
+    "location": "San Francisco, CA",
+    "website": "https://www.coinbase.com",
+    "industry": "Fintech/Cryptocurrency",
+    "jobs": [
+      {
+        "id": "job-031",
+        "title": "Blockchain Developer",
+        "bannerImage": "https://images.unsplash.com/photo-1639762681485-074b7f938ba0?w=800&h=400&fit=crop",
+        "location": "San Francisco, CA",
+        "salary": "$150,000 - $220,000",
+        "jobType": "Full-time",
+        "description": "Design and build secure, decentralized applications on various blockchain platforms. You will work on smart contracts and blockchain infrastructure.",
+        "requirements": [
+          "Experience with blockchain platforms (Ethereum, Solana)",
+          "Proficiency in Solidity, Rust, or Go",
+          "Knowledge of cryptography and decentralized systems",
+          "Understanding of smart contract development and security best practices",
+          "Familiarity with Web3 and decentralized finance (DeFi)"
+        ]
+      },
+      {
+        "id": "job-032",
+        "title": "Quantitative Analyst",
+        "bannerImage": "https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?w=800&h=400&fit=crop",
+        "location": "San Francisco, CA",
+        "salary": "$170,000 - $250,000",
+        "jobType": "Full-time",
+        "description": "Develop and implement quantitative models for trading strategies and risk management in cryptocurrency markets.",
+        "requirements": [
+          "PhD or Master's in a quantitative field (Math, Physics, Finance)",
+          "Strong programming skills in Python, C++, or R",
+          "Experience with financial markets and derivatives",
+          "Knowledge of statistical modeling and machine learning",
+          "Understanding of cryptocurrency markets"
+        ]
+      },
+      {
+        "id": "job-033",
+        "title": "Security Engineer (Crypto)",
+        "bannerImage": "https://images.unsplash.com/photo-1510511459019-5dda7724fd87?w=800&h=400&fit=crop",
+        "location": "San Francisco, CA",
+        "salary": "$165,000 - $210,000",
+        "jobType": "Full-time",
+        "description": "Protect wallets, exchanges, and smart contracts against evolving threats.",
+        "requirements": [
+          "Crypto-specific threat modeling",
+          "Secure key management/HSMs",
+          "Smart contract audits",
+          "Incident response experience",
+          "Chain analysis familiarity"
+        ]
+      },
+      {
+        "id": "job-034",
+        "title": "Backend Engineer, Exchange",
+        "bannerImage": "https://images.unsplash.com/photo-1556157382-97eda2d62296?w=800&h=400&fit=crop",
+        "location": "San Francisco, CA",
+        "salary": "$155,000 - $200,000",
+        "jobType": "Full-time",
+        "description": "Build low-latency services for trading, order books, and settlements.",
+        "requirements": [
+          "Go/Java/C++ proficiency",
+          "Distributed systems and caching",
+          "Low-latency/throughput optimization",
+          "Databases and messaging systems",
+          "Production reliability experience"
+        ]
+      },
+      {
+        "id": "job-035",
+        "title": "Compliance Analyst (AML/KYC)",
+        "bannerImage": "https://images.unsplash.com/photo-1520607162513-77705c0f0d4a?w=800&h=400&fit=crop",
+        "location": "San Francisco, CA",
+        "salary": "$95,000 - $125,000",
+        "jobType": "Full-time",
+        "description": "Review transactions, manage investigations, and maintain regulatory compliance.",
+        "requirements": [
+          "AML/KYC regulations knowledge",
+          "Case management tools",
+          "Detail-oriented analysis",
+          "Strong writing for narratives",
+          "Collaboration with legal/risk"
+        ]
+      },
+      {
+        "id": "job-036",
+        "title": "Product Manager, Wallet",
+        "bannerImage": "https://images.unsplash.com/photo-1551836022-4c4c79ecde51?w=800&h=400&fit=crop",
+        "location": "San Francisco, CA",
+        "salary": "$150,000 - $205,000",
+        "jobType": "Full-time",
+        "description": "Define roadmap for self-custody experiences and dApp integrations.",
+        "requirements": [
+          "PM experience in consumer crypto",
+          "Deep knowledge of wallets and MPC",
+          "UX instincts and experimentation",
+          "Security and recovery flows",
+          "Strong communication skills"
+        ]
+      },
+      {
+        "id": "job-037",
+        "title": "Data Engineer, Risk",
+        "bannerImage": "https://images.unsplash.com/photo-1517148815978-75f6acaaf32c?w=800&h=400&fit=crop",
+        "location": "San Francisco, CA",
+        "salary": "$140,000 - $180,000",
+        "jobType": "Full-time",
+        "description": "Build pipelines for fraud detection, sanctions screening, and monitoring.",
+        "requirements": [
+          "Python/Scala and SQL",
+          "Stream processing (Kafka/Flink)",
+          "Data quality and governance",
+          "Cloud data warehouse experience",
+          "Cross-functional partnership"
+        ]
+      },
+      {
+        "id": "job-038",
+        "title": "Frontend Engineer, Web3",
+        "bannerImage": "https://images.unsplash.com/photo-1551650975-87deedd944c3?w=800&h=400&fit=crop",
+        "location": "San Francisco, CA",
+        "salary": "$135,000 - $170,000",
+        "jobType": "Full-time",
+        "description": "Create performant dApp UIs and extensions with a focus on security and UX.",
+        "requirements": [
+          "React/TypeScript expertise",
+          "Web3 libraries (ethers/web3.js)",
+          "Security-minded frontend practices",
+          "Design systems and accessibility",
+          "Testing and performance tuning"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "8",
+    "name": "Tesla",
+    "logo": "https://upload.wikimedia.org/wikipedia/commons/e/e8/Tesla_logo.png",
+    "location": "Austin, TX",
+    "website": "https://www.tesla.com",
+    "industry": "Clean Technology/Automotive",
+    "jobs": [
+      {
+        "id": "job-036",
+        "title": "Battery Systems Engineer",
+        "bannerImage": "https://upload.wikimedia.org/wikipedia/commons/e/e8/Tesla_logo.png",
+        "location": "Austin, TX",
+        "salary": "$120,000 - $160,000",
+        "jobType": "Full-time",
+        "description": "Design and analyze battery systems for electric vehicles and energy storage. You will work on projects that directly contribute to sustainable transportation.",
+        "requirements": [
+          "Experience with battery technologies and energy storage systems",
+          "Proficiency in simulation software (MATLAB, Simulink)",
+          "Knowledge of power electronics and thermal management",
+          "Strong analytical and problem-solving skills",
+          "Master's degree in electrical or chemical engineering"
+        ]
+      },
+      {
+        "id": "job-037",
+        "title": "Autopilot Software Engineer",
+        "bannerImage": "https://images.unsplash.com/photo-1549317661-bd32c8ce0db2?w=800&h=400&fit=crop",
+        "location": "Austin, TX",
+        "salary": "$140,000 - $200,000",
+        "jobType": "Full-time",
+        "description": "Develop software for Tesla's autonomous driving systems. You will work on computer vision, machine learning, and real-time control systems.",
+        "requirements": [
+          "Experience with computer vision and machine learning",
+          "Proficiency in C++ and Python",
+          "Knowledge of real-time systems and embedded software",
+          "Experience with neural networks and deep learning",
+          "Strong mathematical background"
+        ]
+      },
+      {
+        "id": "job-038",
+        "title": "Power Electronics Engineer",
+        "bannerImage": "https://images.unsplash.com/photo-1518770660439-4636190af475?w=800&h=400&fit=crop",
+        "location": "Austin, TX",
+        "salary": "$130,000 - $175,000",
+        "jobType": "Full-time",
+        "description": "Design inverters, converters, and charging systems for EV platforms.",
+        "requirements": [
+          "High-voltage power design",
+          "EMI/EMC and safety standards",
+          "Simulations and lab validation",
+          "DFMEA and reliability testing",
+          "Schematic/layout proficiency"
+        ]
+      },
+      {
+        "id": "job-039",
+        "title": "Mechanical Design Engineer",
+        "bannerImage": "https://images.unsplash.com/photo-1581093588401-16f7f3f8f3e3?w=800&h=400&fit=crop",
+        "location": "Austin, TX",
+        "salary": "$115,000 - $155,000",
+        "jobType": "Full-time",
+        "description": "Own CAD, tolerance stacks, and DFM for critical vehicle assemblies.",
+        "requirements": [
+          "CAD (CATIA/SolidWorks) expertise",
+          "DFM/DFA and GD&T",
+          "Supplier collaboration",
+          "Testing and validation plans",
+          "Strong communication"
+        ]
+      },
+      {
+        "id": "job-040",
+        "title": "Manufacturing Engineer",
+        "bannerImage": "https://images.unsplash.com/photo-1581092921461-eab62e97a780?w=800&h=400&fit=crop",
+        "location": "Austin, TX",
+        "salary": "$110,000 - $145,000",
+        "jobType": "Full-time",
+        "description": "Scale production lines and improve yield, cycle time, and quality.",
+        "requirements": [
+          "Lean/Six Sigma practices",
+          "Automation and robotics",
+          "Process validation (IQ/OQ/PQ)",
+          "SPC and data analysis",
+          "Cross-functional collaboration"
+        ]
+      },
+      {
+        "id": "job-041",
+        "title": "Embedded Software Engineer",
+        "bannerImage": "https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=800&h=400&fit=crop",
+        "location": "Austin, TX",
+        "salary": "$130,000 - $175,000",
+        "jobType": "Full-time",
+        "description": "Develop real-time firmware for vehicle ECUs and safety-critical systems.",
+        "requirements": [
+          "C/C++ on embedded targets",
+          "RTOS and CAN/LIN protocols",
+          "Functional safety (ISO 26262)",
+          "Hardware bring-up and debugging",
+          "Strong testing discipline"
+        ]
+      },
+      {
+        "id": "job-042",
+        "title": "Thermal Systems Engineer",
+        "bannerImage": "https://images.unsplash.com/photo-1560155019-4a18d3d2b0f0?w=800&h=400&fit=crop",
+        "location": "Austin, TX",
+        "salary": "$120,000 - $160,000",
+        "jobType": "Full-time",
+        "description": "Design thermal management for batteries, powertrain, and cabin comfort.",
+        "requirements": [
+          "CFD and heat transfer expertise",
+          "Refrigerant systems knowledge",
+          "System modeling and testing",
+          "Supplier and manufacturing interface",
+          "Data-driven optimization"
+        ]
+      },
+      {
+        "id": "job-043",
+        "title": "Test Engineer",
+        "bannerImage": "https://images.unsplash.com/photo-1517148815978-75f6acaaf32c?w=800&h=400&fit=crop",
+        "location": "Austin, TX",
+        "salary": "$105,000 - $140,000",
+        "jobType": "Full-time",
+        "description": "Plan and execute component and system validation to ensure durability.",
+        "requirements": [
+          "Test plan creation and execution",
+          "DAQ and instrumentation",
+          "Failure analysis and reporting",
+          "Environmental and vibration testing",
+          "Strong documentation"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "9",
+    "name": "HubSpot",
+    "logo": "https://logos-world.net/wp-content/uploads/2022/01/HubSpot-Logo-2006.png",
+    "location": "Cambridge, MA",
+    "website": "https://www.hubspot.com",
+    "industry": "Digital Marketing/SaaS",
+    "jobs": [
+      {
+        "id": "job-041",
+        "title": "Growth Marketing Manager",
+        "bannerImage": "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800&h=400&fit=crop",
+        "location": "Cambridge, MA",
+        "salary": "$80,000 - $110,000",
+        "jobType": "Full-time",
+        "description": "Drive user acquisition and engagement through data-driven marketing strategies. You will optimize campaigns across multiple channels.",
+        "requirements": [
+          "Proven experience in growth marketing or digital marketing",
+          "Knowledge of marketing analytics and A/B testing",
+          "Experience with marketing automation and CRM systems",
+          "Strong analytical skills and data-driven mindset",
+          "Excellent communication and project management skills"
+        ]
+      },
+      {
+        "id": "job-042",
+        "title": "Product Marketing Manager",
+        "bannerImage": "https://images.unsplash.com/photo-1552664730-d307ca884978?w=800&h=400&fit=crop",
+        "location": "Cambridge, MA",
+        "salary": "$90,000 - $130,000",
+        "jobType": "Full-time",
+        "description": "Lead go-to-market strategies for our SaaS products. You will work closely with product and sales teams to drive adoption and growth.",
+        "requirements": [
+          "Experience in product marketing for B2B SaaS products",
+          "Strong understanding of customer needs and market positioning",
+          "Excellent written and verbal communication skills",
+          "Ability to work cross-functionally with multiple teams",
+          "Data-driven approach to measuring success"
+        ]
+      },
+      {
+        "id": "job-043",
+        "title": "Content Strategist",
+        "bannerImage": "https://images.unsplash.com/photo-1494173853739-c21f58b16055?w=800&h=400&fit=crop",
+        "location": "Cambridge, MA",
+        "salary": "$80,000 - $105,000",
+        "jobType": "Full-time",
+        "description": "Own editorial calendars and create content that drives organic growth.",
+        "requirements": [
+          "B2B content portfolio",
+          "SEO best practices",
+          "Strong storytelling and editing",
+          "Cross-team collaboration",
+          "Analytics-driven approach"
+        ]
+      },
+      {
+        "id": "job-044",
+        "title": "Sales Operations Analyst",
+        "bannerImage": "https://images.unsplash.com/photo-1518085250887-2f903c200fee?w=800&h=400&fit=crop",
+        "location": "Cambridge, MA",
+        "salary": "$85,000 - $115,000",
+        "jobType": "Full-time",
+        "description": "Improve pipeline visibility, forecasting accuracy, and sales productivity.",
+        "requirements": [
+          "CRM (Salesforce/HubSpot) expertise",
+          "SQL and BI tools",
+          "Revenue operations experience",
+          "Clear communication with GTM teams",
+          "Process-oriented mindset"
+        ]
+      },
+      {
+        "id": "job-045",
+        "title": "Frontend Engineer (SaaS)",
+        "bannerImage": "https://images.unsplash.com/photo-1551650975-87deedd944c3?w=800&h=400&fit=crop",
+        "location": "Cambridge, MA",
+        "salary": "$120,000 - $155,000",
+        "jobType": "Full-time",
+        "description": "Build delightful UI for marketing, sales, and service hubs.",
+        "requirements": [
+          "React/TypeScript experience",
+          "Design systems and accessibility",
+          "Testing and performance",
+          "Collaborate with designers/PMs",
+          "Strong UX intuition"
+        ]
+      },
+      {
+        "id": "job-046",
+        "title": "Data Analyst, Marketing",
+        "bannerImage": "https://images.unsplash.com/photo-1517148815978-75f6acaaf32c?w=800&h=400&fit=crop",
+        "location": "Cambridge, MA",
+        "salary": "$95,000 - $125,000",
+        "jobType": "Full-time",
+        "description": "Turn funnel data into insights and recommendations across channels.",
+        "requirements": [
+          "SQL and Python/R",
+          "Attribution and experimentation",
+          "Dashboarding (Looker/Tableau)",
+          "Clear communication to stakeholders",
+          "Attention to detail"
+        ]
+      },
+      {
+        "id": "job-047",
+        "title": "Customer Success Manager",
+        "bannerImage": "https://images.unsplash.com/photo-1529336953121-ad5a0d43d0d2?w=800&h=400&fit=crop",
+        "location": "Cambridge, MA",
+        "salary": "$85,000 - $120,000",
+        "jobType": "Full-time",
+        "description": "Drive adoption, retention, and expansion for strategic accounts.",
+        "requirements": [
+          "B2B SaaS CS experience",
+          "Exec-level communication",
+          "Churn risk identification",
+          "Value realization playbooks",
+          "CRM proficiency"
+        ]
+      },
+      {
+        "id": "job-048",
+        "title": "UX Designer",
+        "bannerImage": "https://images.unsplash.com/photo-1524638431109-93d95c968f03?w=800&h=400&fit=crop",
+        "location": "Cambridge, MA",
+        "salary": "$110,000 - $145,000",
+        "jobType": "Full-time",
+        "description": "Design intuitive experiences for marketers, sales reps, and service teams.",
+        "requirements": [
+          "Portfolio with SaaS workflows",
+          "Figma and prototyping",
+          "User research and testing",
+          "Design systems experience",
+          "Strong collaboration"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "10",
+    "name": "Boston Dynamics",
+    "logo": "https://cdn.worldvectorlogo.com/logos/boston-dynamics-logo-2008.svg",
+    "location": "Waltham, MA",
+    "website": "https://www.bostondynamics.com",
+    "industry": "Robotics",
+    "jobs": [
+      {
+        "id": "job-046",
+        "title": "Robotics Software Engineer",
+        "bannerImage": "https://images.unsplash.com/photo-1485827404703-89b55fcc595e?w=800&h=400&fit=crop",
+        "location": "Waltham, MA",
+        "salary": "$130,000 - $180,000",
+        "jobType": "Full-time",
+        "description": "Develop software for our next-generation autonomous robots. You will work on control systems, perception, and navigation algorithms.",
+        "requirements": [
+          "Experience with robotics operating systems (ROS)",
+          "Proficiency in C++ and Python",
+          "Knowledge of control systems, path planning, and localization",
+          "Experience with sensor data fusion (LiDAR, cameras)",
+          "Strong mathematical and analytical skills"
+        ]
+      },
+      {
+        "id": "job-047",
+        "title": "Mechanical Engineer",
+        "bannerImage": "https://images.unsplash.com/photo-1581092921461-eab62e97a780?w=800&h=400&fit=crop",
+        "location": "Waltham, MA",
+        "salary": "$110,000 - $150,000",
+        "jobType": "Full-time",
+        "description": "Design and build the mechanical components of our robots. You will be involved in the entire product lifecycle, from concept to manufacturing.",
+        "requirements": [
+          "Proficiency in CAD software (SolidWorks, Fusion 360)",
+          "Experience with robotics, mechatronics, or automation",
+          "Knowledge of materials science and manufacturing processes",
+          "Strong analytical and design skills",
+          "Master's degree in Mechanical Engineering preferred"
+        ]
+      },
+      {
+        "id": "job-048",
+        "title": "Perception Engineer",
+        "bannerImage": "https://images.unsplash.com/photo-1526948128573-703ee1aeb6fa?w=800&h=400&fit=crop",
+        "location": "Waltham, MA",
+        "salary": "$140,000 - $185,000",
+        "jobType": "Full-time",
+        "description": "Build computer vision pipelines for 3D understanding and scene segmentation.",
+        "requirements": [
+          "SLAM and 3D vision experience",
+          "Deep learning frameworks",
+          "Sensor calibration and synchronization",
+          "Real-time performance optimization",
+          "Strong C++/Python skills"
+        ]
+      },
+      {
+        "id": "job-049",
+        "title": "Controls Engineer",
+        "bannerImage": "https://images.unsplash.com/photo-1485827404703-89b55fcc595e?w=800&h=400&fit=crop",
+        "location": "Waltham, MA",
+        "salary": "$135,000 - $180,000",
+        "jobType": "Full-time",
+        "description": "Design robust control algorithms for dynamic legged robots.",
+        "requirements": [
+          "Classical and modern control theory",
+          "System identification and modeling",
+          "Hardware-in-the-loop testing",
+          "Safety-critical system experience",
+          "MATLAB/Simulink proficiency"
+        ]
+      },
+      {
+        "id": "job-050",
+        "title": "Robotics Test Engineer",
+        "bannerImage": "https://images.unsplash.com/photo-1517148815978-75f6acaaf32c?w=800&h=400&fit=crop",
+        "location": "Waltham, MA",
+        "salary": "$110,000 - $145,000",
+        "jobType": "Full-time",
+        "description": "Plan experiments and validation to ensure reliability in real-world environments.",
+        "requirements": [
+          "Test planning and instrumentation",
+          "Data analysis and reporting",
+          "Failure mode analysis",
+          "Field testing experience",
+          "Excellent documentation"
+        ]
+      },
+      {
+        "id": "job-051",
+        "title": "Electrical Engineer",
+        "bannerImage": "https://images.unsplash.com/photo-1485827404703-89b55fcc595e?w=800&h=400&fit=crop",
+        "location": "Waltham, MA",
+        "salary": "$120,000 - $160,000",
+        "jobType": "Full-time",
+        "description": "Design PCBs, power distribution, and sensor interfaces for robots.",
+        "requirements": [
+          "Schematic/layout and EMC considerations",
+          "Power electronics fundamentals",
+          "Embedded interfaces (SPI/I2C/CAN)",
+          "DFM and supplier collaboration",
+          "Lab bring-up and validation"
+        ]
+      },
+      {
+        "id": "job-052",
+        "title": "Field Applications Engineer",
+        "bannerImage": "https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=800&h=400&fit=crop",
+        "location": "Waltham, MA",
+        "salary": "$105,000 - $135,000",
+        "jobType": "Full-time",
+        "description": "Deploy robots at customer sites and close feedback loops with engineering.",
+        "requirements": [
+          "Customer-facing technical experience",
+          "Scripting for on-site tooling",
+          "Troubleshooting mechatronic systems",
+          "Clear communication and training",
+          "Willingness to travel"
+        ]
+      },
+      {
+        "id": "job-053",
+        "title": "Product Manager, Robotics",
+        "bannerImage": "https://images.unsplash.com/photo-1551836022-4c4c79ecde51?w=800&h=400&fit=crop",
+        "location": "Waltham, MA",
+        "salary": "$150,000 - $200,000",
+        "jobType": "Full-time",
+        "description": "Own roadmap for enterprise robotics applications and integrations.",
+        "requirements": [
+          "PM experience in robotics/automation",
+          "Strong user research and prioritization",
+          "Metrics-driven decision making",
+          "Cross-functional leadership",
+          "Excellent presentation skills"
+        ]
+      }
+    ]
+  }
 ]

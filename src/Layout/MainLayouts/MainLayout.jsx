@@ -5,7 +5,6 @@ import Footer from "../../Components/Footer/Footer";
 
 const MainLayout = () => {
   return (
-    // full-page wrapper with black background
     <div className="bg-black min-h-screen flex flex-col">
       <NavBar />
       <main className="flex-grow">
