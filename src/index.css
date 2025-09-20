@@ -1,2 +1,14 @@
 @import "tailwindcss";
 @plugin "daisyui";
+
+/* Custom CSS to hide the scrollbar without affecting scrolling */
+.scrollbar-hide {
+  /* For IE, Edge and Firefox */
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
+}
+
+/* For Chrome, Safari and Opera */
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}
