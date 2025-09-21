@@ -4,6 +4,7 @@ import CompanyName from "../../Components/CompanyName/CompanyName";
 import { useLoaderData } from "react-router-dom";
 import FeaturesJobs from "../../Components/FeaturesJobs/FeaturesJobs";
 import CompanyList from "../../Components/CompanyList/CompanyList";
+import TestimonialSection from "../../Components/TestimonialSection/TestimonialSection";
 
 const Home = () => {
     const data= useLoaderData();
@@ -16,6 +17,7 @@ const Home = () => {
         <CompanyName  data={data}/>
         <FeaturesJobs data={data}/>
        <CompanyList data={data}/>
+       <TestimonialSection/>
       </div>
     </div>
   );

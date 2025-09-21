@@ -17,7 +17,6 @@ const FeaturesJobs = ({ data }) => {
     );
   }
 
-  // Define a palette of background colors
   const cardBackgroundColors = [
     'bg-blue-50',     // Light blue
     'bg-green-50',    // Light green

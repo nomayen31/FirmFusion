@@ -1,16 +1,16 @@
 import React, { useContext, useState } from "react";
 import { FiEye, FiEyeOff } from "react-icons/fi";
-import { Link, useNavigate,  } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { AuthContext } from "../../providers/AuthProvider";
-import { updateProfile } from "firebase/auth"; // ✅ import this
+import { updateProfile } from "firebase/auth";
 
 export default function Register({ onSubmit }) {
   const [error, setError] = useState("");
   const [showPassword, setShowPassword] = useState(false);
   const [accepted, setAccepted] = useState(false);
-  const { createNewUser, setUser } = useContext(AuthContext);
+  const { createNewUser, setUser, signInWithGithub, signInWithGoogle } =
+    useContext(AuthContext);
   const navigate = useNavigate();
-
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -33,16 +33,16 @@ export default function Register({ onSubmit }) {
     createNewUser(payload.email, payload.password)
       .then((result) => {
         const user = result.user;
-
-        // ✅ update displayName & photoURL in Firebase
         updateProfile(user, {
           displayName: payload.name,
           photoURL: payload.photoURL,
         })
           .then(() => {
-            // ✅ update context user after profile update
-            setUser({ ...user, displayName: payload.name, photoURL: payload.photoURL });
-            console.log("Profile updated successfully!", user);
+            setUser({
+              ...user,
+              displayName: payload.name,
+              photoURL: payload.photoURL,
+            });
             alert("Registration successful!");
             navigate(`${location.state ? location.state : "/"}`);
           })
@@ -53,6 +53,28 @@ export default function Register({ onSubmit }) {
       .catch((error) => {
         setError(error.message);
       });
+  };
+
+  const handleGoogleLogin = () => {
+    signInWithGoogle()
+      .then((result) => {
+        const user = result.user;
+        setUser(user);
+        alert("Google login successful!");
+        navigate(`${location.state ? location.state : "/"}`);
+      })
+      .catch((error) => setError(error.message));
+  };
+
+  const handleGithubLogin = () => {
+    signInWithGithub()
+      .then((result) => {
+        const user = result.user;
+        setUser(user);
+        alert("GitHub login successful!");
+        navigate(`${location.state ? location.state : "/"}`);
+      })
+      .catch((error) => setError(error.message));
   };
 
   return (
@@ -66,9 +88,11 @@ export default function Register({ onSubmit }) {
         </p>
 
         <form onSubmit={handleSubmit} className="space-y-6">
-          {/* Name */}
           <div className="space-y-2">
-            <label htmlFor="name" className="block text-base font-semibold text-gray-800">
+            <label
+              htmlFor="name"
+              className="block text-base font-semibold text-gray-800"
+            >
               Your Name
             </label>
             <input
@@ -81,9 +105,11 @@ export default function Register({ onSubmit }) {
             />
           </div>
 
-          {/* Photo URL */}
           <div className="space-y-2">
-            <label htmlFor="photoURL" className="block text-base font-semibold text-gray-800">
+            <label
+              htmlFor="photoURL"
+              className="block text-base font-semibold text-gray-800"
+            >
               Photo URL
             </label>
             <input
@@ -95,9 +121,11 @@ export default function Register({ onSubmit }) {
             />
           </div>
 
-          {/* Email */}
           <div className="space-y-2">
-            <label htmlFor="email" className="block text-base font-semibold text-gray-800">
+            <label
+              htmlFor="email"
+              className="block text-base font-semibold text-gray-800"
+            >
               Email
             </label>
             <input
@@ -110,9 +138,11 @@ export default function Register({ onSubmit }) {
             />
           </div>
 
-          {/* Password */}
           <div className="space-y-2">
-            <label htmlFor="password" className="block text-base font-semibold text-gray-800">
+            <label
+              htmlFor="password"
+              className="block text-base font-semibold text-gray-800"
+            >
               Password
             </label>
             <div className="relative">
@@ -130,12 +160,15 @@ export default function Register({ onSubmit }) {
                 className="absolute inset-y-0 flex items-center text-gray-500 transition right-4 hover:text-green-600"
                 aria-label={showPassword ? "Hide password" : "Show password"}
               >
-                {showPassword ? <FiEyeOff className="w-5 h-5" /> : <FiEye className="w-5 h-5" />}
+                {showPassword ? (
+                  <FiEyeOff className="w-5 h-5" />
+                ) : (
+                  <FiEye className="w-5 h-5" />
+                )}
               </button>
             </div>
           </div>
 
-          {/* Terms */}
           <label className="flex items-center gap-3 text-sm text-gray-700 select-none">
             <input
               type="checkbox"
@@ -145,30 +178,52 @@ export default function Register({ onSubmit }) {
             />
             <span className="text-gray-600">
               Accept{" "}
-              <Link to="/terms" className="font-semibold text-green-600 hover:underline">
+              <Link
+                to="/terms"
+                className="font-semibold text-green-600 hover:underline"
+              >
                 Terms & Conditions
               </Link>
             </span>
           </label>
 
-          {/* Error */}
           {error && (
-            <p className="mt-4 text-sm font-semibold text-center text-red-500">{error}</p>
+            <p className="mt-4 text-sm font-semibold text-center text-red-500">
+              {error}
+            </p>
           )}
 
-          {/* Submit */}
           <button
             type="submit"
             disabled={!accepted}
-            className="w-full rounded-full bg-gradient-to-r from-teal-500 to-green-600 text-white py-4 font-bold tracking-wide shadow-lg transform transition-all duration-300 hover:scale-[1.02] hover:shadow-2xl disabled:opacity-50 disabled:cursor-not-allowed"
+            className="w-full rounded-full bg-gradient-to-r from-teal-500 to-green-600 text-white py-4 font-bold tracking-wide shadow-lg transform transition-all 
+            duration-300 hover:scale-[1.02] hover:shadow-2xl disabled:opacity-50 disabled:cursor-not-allowed"
           >
             Register
           </button>
         </form>
 
+        <div className="flex flex-col gap-4 mt-6">
+          <button
+            onClick={handleGoogleLogin}
+            className="w-full py-3 font-semibold text-white transition bg-red-500 rounded-full shadow-md hover:bg-red-600"
+          >
+            Continue with Google
+          </button>
+          <button
+            onClick={handleGithubLogin}
+            className="w-full py-3 font-semibold text-white transition bg-gray-800 rounded-full shadow-md hover:bg-gray-900"
+          >
+            Continue with GitHub
+          </button>
+        </div>
+
         <p className="mt-6 text-sm text-center text-gray-600">
           Already have an account?{" "}
-          <Link to="/auth/login" className="font-semibold text-red-500 hover:underline">
+          <Link
+            to="/auth/login"
+            className="font-semibold text-red-500 hover:underline"
+          >
             Login
           </Link>
         </p>
