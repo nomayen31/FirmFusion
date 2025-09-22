@@ -1,4 +1,5 @@
 import React, { useMemo, useState, useEffect } from "react";
+import { Helmet } from "react-helmet";
 import { useLoaderData } from "react-router-dom";
 
 const toArray = (x) => (Array.isArray(x) ? x : Array.isArray(x?.data) ? x.data : []);
@@ -39,14 +40,18 @@ const CaseStudy = () => {
 
   return (
     <main className="min-h-screen bg-[#0A0C34] px-4 py-8 sm:px-6 lg:px-10">
+        <Helmet>
+  <title>Case Study | JobFinder</title>
+  <meta name="description" content="View and manage your JobFinder profile." />
+</Helmet>
       <header className="mx-auto mb-6 max-w-7xl">
-        <h1 className="bg-gradient-to-r from-indigo-200 via-white to-fuchsia-200 bg-clip-text text-3xl font-extrabold text-transparent sm:text-4xl">
+        <h1 className="text-3xl font-extrabold text-transparent bg-gradient-to-r from-indigo-200 via-white to-fuchsia-200 bg-clip-text sm:text-4xl">
           Case Studies
         </h1>
       </header>
 
-      <section className="mx-auto grid max-w-7xl grid-cols-1 gap-6 lg:grid-cols-12">
-        <aside className="lg:col-span-4 rounded-2xl border border-white/10 bg-white/5 backdrop-blur p-4">
+      <section className="grid grid-cols-1 gap-6 mx-auto max-w-7xl lg:grid-cols-12">
+        <aside className="p-4 border lg:col-span-4 rounded-2xl border-white/10 bg-white/5 backdrop-blur">
           <div className="mb-3">
             <input
               type="text"
@@ -58,7 +63,7 @@ const CaseStudy = () => {
                 );
                 if (first) setSelectedId(first.id ?? 0);
               }}
-              className="w-full rounded-xl border border-white/10 bg-white/10 px-4 py-3 text-white placeholder:text-white/60 outline-none focus:ring-2 focus:ring-white/40"
+              className="w-full px-4 py-3 text-white border outline-none rounded-xl border-white/10 bg-white/10 placeholder:text-white/60 focus:ring-2 focus:ring-white/40"
             />
           </div>
           <ul className="max-h-[70vh] overflow-auto pr-1 space-y-2">
@@ -84,7 +89,7 @@ const CaseStudy = () => {
               );
             })}
             {!items.length && (
-              <li className="rounded-xl border border-white/10 bg-white/5 p-4 text-white/80">
+              <li className="p-4 border rounded-xl border-white/10 bg-white/5 text-white/80">
                 No case studies found.
               </li>
             )}
@@ -93,42 +98,42 @@ const CaseStudy = () => {
 
         <article className="lg:col-span-8">
           {selected ? (
-            <div className="rounded-2xl border border-white/10 bg-white/5 p-6 shadow-2xl backdrop-blur">
+            <div className="p-6 border shadow-2xl rounded-2xl border-white/10 bg-white/5 backdrop-blur">
               {displayImg && (
                 <div className="mb-5">
                   <img
                     src={displayImg}
                     alt={selected.title || "Case study image"}
-                    className="h-56 w-full rounded-xl object-cover md:h-72"
+                    className="object-cover w-full h-56 rounded-xl md:h-72"
                   />
                 </div>
               )}
 
               <h2 className="text-2xl font-bold text-white">{selected.title ?? "Untitled"}</h2>
 
-              <div className="mt-3 flex flex-wrap gap-2">
+              <div className="flex flex-wrap gap-2 mt-3">
                 {selected?.type && (
                   <span className="rounded-full bg-white px-3 py-1 text-xs font-semibold text-[#0A0C34]">
                     {selected.type}
                   </span>
                 )}
                 {selected?.category && (
-                  <span className="rounded-full bg-white/10 px-3 py-1 text-xs font-medium text-indigo-100/90">
+                  <span className="px-3 py-1 text-xs font-medium rounded-full bg-white/10 text-indigo-100/90">
                     {selected.category}
                   </span>
                 )}
                 {selected?.company && (
-                  <span className="rounded-full bg-white/10 px-3 py-1 text-xs font-medium text-indigo-100/90">
+                  <span className="px-3 py-1 text-xs font-medium rounded-full bg-white/10 text-indigo-100/90">
                     {selected.company}
                   </span>
                 )}
                 {selected?.author && (
-                  <span className="rounded-full bg-white/10 px-3 py-1 text-xs font-medium text-indigo-100/90">
+                  <span className="px-3 py-1 text-xs font-medium rounded-full bg-white/10 text-indigo-100/90">
                     by {selected.author}
                   </span>
                 )}
                 {toDate(selected?.date) && (
-                  <span className="rounded-full bg-white/10 px-3 py-1 text-xs font-medium text-indigo-100/90">
+                  <span className="px-3 py-1 text-xs font-medium rounded-full bg-white/10 text-indigo-100/90">
                     {toDate(selected.date).toLocaleDateString()}
                   </span>
                 )}
@@ -136,7 +141,7 @@ const CaseStudy = () => {
                 {safeArray(selected?.tags).map((t, i) => (
                   <span
                     key={i}
-                    className="rounded-full bg-white/10 px-3 py-1 text-xs font-medium text-indigo-100/90"
+                    className="px-3 py-1 text-xs font-medium rounded-full bg-white/10 text-indigo-100/90"
                   >
                     {String(t)}
                   </span>
@@ -168,7 +173,7 @@ const CaseStudy = () => {
                         <img
                           src={src}
                           alt={`Thumbnail ${idx + 1}`}
-                          className="h-20 w-full object-cover opacity-90 group-hover:opacity-100"
+                          className="object-cover w-full h-20 opacity-90 group-hover:opacity-100"
                         />
                       </button>
                     ))}
@@ -176,7 +181,7 @@ const CaseStudy = () => {
                 </div>
               )}
 
-              <div className="mt-6 flex flex-wrap gap-3">
+              <div className="flex flex-wrap gap-3 mt-6">
                 {selected?.link ? (
                   <a
                     href={selected.link}
@@ -189,7 +194,7 @@ const CaseStudy = () => {
                 ) : (
                   <button
                     disabled
-                    className="inline-flex cursor-not-allowed items-center justify-center rounded-xl border border-white/20 px-5 py-3 text-sm font-semibold text-white/85"
+                    className="inline-flex items-center justify-center px-5 py-3 text-sm font-semibold border cursor-not-allowed rounded-xl border-white/20 text-white/85"
                   >
                     No External Link
                   </button>
@@ -197,7 +202,7 @@ const CaseStudy = () => {
               </div>
             </div>
           ) : (
-            <div className="rounded-2xl border border-white/10 bg-white/5 p-10 text-center text-indigo-100/80">
+            <div className="p-10 text-center border rounded-2xl border-white/10 bg-white/5 text-indigo-100/80">
               Select a case study from the left to view details.
             </div>
           )}

@@ -1,6 +1,7 @@
 import React, { useMemo } from "react";
 import { useLocation, useParams, Link, useNavigate } from "react-router-dom";
 import { FaUserEdit, FaCalendarAlt, FaClock, FaArrowLeft, FaTags } from "react-icons/fa";
+import { Helmet } from "react-helmet";
 
 const fallbackPosts = [
   {
@@ -104,13 +105,17 @@ const BlogDetails = () => {
 
   if (!post) {
     return (
-      <div className="min-h-screen bg-gray-950 text-white flex items-center justify-center p-6">
+      <div className="flex items-center justify-center min-h-screen p-6 text-white bg-gray-950">
+          <Helmet>
+  <title>Blog Details | JobFinder</title>
+  <meta name="description" content="View and manage your JobFinder profile." />
+</Helmet>
         <div className="text-center">
-          <h1 className="text-2xl font-bold mb-4">Post not found</h1>
-          <p className="text-gray-400 mb-6">The article you are looking for may have been moved or deleted.</p>
+          <h1 className="mb-4 text-2xl font-bold">Post not found</h1>
+          <p className="mb-6 text-gray-400">The article you are looking for may have been moved or deleted.</p>
           <button
             onClick={() => navigate("/blog")}
-            className="inline-flex items-center rounded-full bg-white px-6 py-3 font-semibold text-gray-900 transition-all duration-300 hover:bg-gray-200"
+            className="inline-flex items-center px-6 py-3 font-semibold text-gray-900 transition-all duration-300 bg-white rounded-full hover:bg-gray-200"
           >
             <FaArrowLeft className="mr-2" />
             Back to Blog
@@ -121,30 +126,30 @@ const BlogDetails = () => {
   }
 
   return (
-    <div className="min-h-screen bg-gray-950 text-white font-sans">
-      <header className="py-16 bg-gradient-to-br from-indigo-950 to-purple-950 shadow-xl relative overflow-hidden">
+    <div className="min-h-screen font-sans text-white bg-gray-950">
+      <header className="relative py-16 overflow-hidden shadow-xl bg-gradient-to-br from-indigo-950 to-purple-950">
         <div className="absolute inset-0 opacity-20">
-          <div className="absolute w-72 h-72 bg-indigo-500 rounded-full mix-blend-multiply filter blur-xl opacity-70 animate-blob top-0 -left-4"></div>
-          <div className="absolute w-72 h-72 bg-purple-500 rounded-full mix-blend-multiply filter blur-xl opacity-70 animate-blob animation-delay-2000 top-0 right-4"></div>
-          <div className="absolute w-72 h-72 bg-blue-500 rounded-full mix-blend-multiply filter blur-xl opacity-70 animate-blob animation-delay-4000 top-44 left-24"></div>
+          <div className="absolute top-0 bg-indigo-500 rounded-full w-72 h-72 mix-blend-multiply filter blur-xl opacity-70 animate-blob -left-4"></div>
+          <div className="absolute top-0 bg-purple-500 rounded-full w-72 h-72 mix-blend-multiply filter blur-xl opacity-70 animate-blob animation-delay-2000 right-4"></div>
+          <div className="absolute bg-blue-500 rounded-full w-72 h-72 mix-blend-multiply filter blur-xl opacity-70 animate-blob animation-delay-4000 top-44 left-24"></div>
         </div>
-        <div className="container mx-auto px-4 relative z-10 pt-10">
+        <div className="container relative z-10 px-4 pt-10 mx-auto">
           <button
             onClick={() => navigate(-1)}
-            className="mb-6 inline-flex items-center rounded-full border border-white/20 px-4 py-2 text-sm text-white/90 transition-colors duration-300 hover:bg-white/10"
+            className="inline-flex items-center px-4 py-2 mb-6 text-sm transition-colors duration-300 border rounded-full border-white/20 text-white/90 hover:bg-white/10"
           >
             <FaArrowLeft className="mr-2" />
             Back
           </button>
-          <h1 className="text-3xl sm:text-4xl md:text-5xl font-extrabold leading-tight">
+          <h1 className="text-3xl font-extrabold leading-tight sm:text-4xl md:text-5xl">
             {post.title}
           </h1>
-          <div className="mt-4 flex flex-wrap items-center text-sm text-indigo-300">
-            <div className="flex items-center mr-4 mb-2">
+          <div className="flex flex-wrap items-center mt-4 text-sm text-indigo-300">
+            <div className="flex items-center mb-2 mr-4">
               <FaUserEdit className="mr-2 text-purple-400" />
               <span>{post.author}</span>
             </div>
-            <div className="flex items-center mr-4 mb-2">
+            <div className="flex items-center mb-2 mr-4">
               <FaCalendarAlt className="mr-2 text-purple-400" />
               <span>{post.date}</span>
             </div>
@@ -155,24 +160,24 @@ const BlogDetails = () => {
           </div>
         </div>
       </header>
-      <main className="container mx-auto px-4 py-12">
-        <article className="mx-auto max-w-4xl bg-white/5 rounded-3xl p-6 sm:p-10 shadow-2xl backdrop-blur border border-white/10">
+      <main className="container px-4 py-12 mx-auto">
+        <article className="max-w-4xl p-6 mx-auto border shadow-2xl bg-white/5 rounded-3xl sm:p-10 backdrop-blur border-white/10">
           <img
             src={post.image}
             alt={post.title}
-            className="w-full h-auto rounded-xl mb-8 object-cover shadow-lg"
+            className="object-cover w-full h-auto mb-8 shadow-lg rounded-xl"
           />
-          <div className="flex items-center flex-wrap mb-6">
+          <div className="flex flex-wrap items-center mb-6">
             <FaTags className="mr-2 text-purple-400" />
             {post.tags.map((tag, index) => (
               <span key={index} className="inline-block bg-purple-600 text-white text-xs font-semibold px-2.5 py-1 rounded-full mr-2 mb-2">{tag}</span>
             ))}
           </div>
-          <p className="text-gray-200 leading-relaxed text-lg mb-6">{post.excerpt}</p>
-          <p className="text-gray-200 leading-relaxed text-lg">{post.fullText}</p>
+          <p className="mb-6 text-lg leading-relaxed text-gray-200">{post.excerpt}</p>
+          <p className="text-lg leading-relaxed text-gray-200">{post.fullText}</p>
         </article>
-        <section className="mx-auto max-w-6xl mt-20">
-          <h2 className="text-3xl font-bold mb-8 text-center sm:text-left text-gray-100">Suggested Posts</h2>
+        <section className="max-w-6xl mx-auto mt-20">
+          <h2 className="mb-8 text-3xl font-bold text-center text-gray-100 sm:text-left">Suggested Posts</h2>
           <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
             {suggestions.map((s) => (
               <Link key={s.id} to={`/blog/${s.id}`} state={{ post: s }} className="block group">
@@ -181,13 +186,13 @@ const BlogDetails = () => {
                     <img
                       src={s.image}
                       alt={s.title}
-                      className="w-full h-40 object-cover rounded-xl mb-6 shadow"
+                      className="object-cover w-full h-40 mb-6 shadow rounded-xl"
                     />
                   </div>
                   <div className="flex flex-col flex-grow">
-                    <h3 className="text-lg font-bold mb-2 leading-snug group-hover:text-purple-400 transition-colors">{s.title}</h3>
-                    <p className="text-gray-400 text-sm flex-grow">{s.excerpt}</p>
-                    <div className="mt-4 flex flex-wrap items-center text-sm text-gray-500">
+                    <h3 className="mb-2 text-lg font-bold leading-snug transition-colors group-hover:text-purple-400">{s.title}</h3>
+                    <p className="flex-grow text-sm text-gray-400">{s.excerpt}</p>
+                    <div className="flex flex-wrap items-center mt-4 text-sm text-gray-500">
                       <div className="flex items-center mr-4">
                         <FaUserEdit className="mr-2 text-purple-400" />
                         <span>{s.author}</span>

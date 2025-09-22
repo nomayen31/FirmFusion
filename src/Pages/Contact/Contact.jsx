@@ -1,21 +1,22 @@
 import React from 'react';
+import { Helmet } from 'react-helmet';
 
 const Contact = () => {
   const MailIcon = () => (
-    <svg xmlns="http://www.w3.org/2000/svg" className="text-purple-400 mt-1 mr-4 flex-shrink-0" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+    <svg xmlns="http://www.w3.org/2000/svg" className="flex-shrink-0 mt-1 mr-4 text-purple-400" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
       <rect x="2" y="4" width="20" height="16" rx="2" ry="2"></rect>
       <path d="M22 6l-10 7L2 6"></path>
     </svg>
   );
 
   const PhoneIcon = () => (
-    <svg xmlns="http://www.w3.org/2000/svg" className="text-purple-400 mt-1 mr-4 flex-shrink-0" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+    <svg xmlns="http://www.w3.org/2000/svg" className="flex-shrink-0 mt-1 mr-4 text-purple-400" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
       <path d="M22 16.92v3.08a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-5.01-4.88 19.79 19.79 0 0 1-3.07-8.63A2 2 0 0 1 3.08 2h3.08L9 5.21l-1.5 1.5a13.06 13.06 0 0 0 4.89 4.89l1.5-1.5L16.79 15z"></path>
     </svg>
   );
 
   const MapMarkerIcon = () => (
-    <svg xmlns="http://www.w3.org/2000/svg" className="text-purple-400 mt-1 mr-4 flex-shrink-0" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+    <svg xmlns="http://www.w3.org/2000/svg" className="flex-shrink-0 mt-1 mr-4 text-purple-400" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
       <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
       <circle cx="12" cy="10" r="3"></circle>
     </svg>
@@ -42,27 +43,31 @@ const Contact = () => {
   );
 
   return (
-    <div className="min-h-screen bg-gray-950 text-white font-sans">
-      <header className="py-20 text-center bg-gradient-to-br from-indigo-950 to-purple-950 shadow-xl relative overflow-hidden">
+    <div className="min-h-screen font-sans text-white bg-gray-950">
+        <Helmet>
+  <title>Contact | JobFinder</title>
+  <meta name="description" content="View and manage your JobFinder profile." />
+</Helmet>
+      <header className="relative py-20 overflow-hidden text-center shadow-xl bg-gradient-to-br from-indigo-950 to-purple-950">
         <div className="absolute inset-0 opacity-20">
-          <div className="absolute w-72 h-72 bg-indigo-500 rounded-full mix-blend-multiply filter blur-xl opacity-70 animate-blob top-0 -left-4"></div>
-          <div className="absolute w-72 h-72 bg-purple-500 rounded-full mix-blend-multiply filter blur-xl opacity-70 animate-blob animation-delay-2000 top-0 right-4"></div>
-          <div className="absolute w-72 h-72 bg-blue-500 rounded-full mix-blend-multiply filter blur-xl opacity-70 animate-blob animation-delay-4000 top-44 left-24"></div>
+          <div className="absolute top-0 bg-indigo-500 rounded-full w-72 h-72 mix-blend-multiply filter blur-xl opacity-70 animate-blob -left-4"></div>
+          <div className="absolute top-0 bg-purple-500 rounded-full w-72 h-72 mix-blend-multiply filter blur-xl opacity-70 animate-blob animation-delay-2000 right-4"></div>
+          <div className="absolute bg-blue-500 rounded-full w-72 h-72 mix-blend-multiply filter blur-xl opacity-70 animate-blob animation-delay-4000 top-44 left-24"></div>
         </div>
-        <div className="container mx-auto px-4 mt-5 relative z-10">
-          <h1 className="text-4xl sm:text-5xl md:text-6xl font-extrabold tracking-tight leading-tight">
+        <div className="container relative z-10 px-4 mx-auto mt-5">
+          <h1 className="text-4xl font-extrabold leading-tight tracking-tight sm:text-5xl md:text-6xl">
             Get In Touch
           </h1>
-          <p className="mt-4 text-lg sm:text-xl text-indigo-300">
+          <p className="mt-4 text-lg text-indigo-300 sm:text-xl">
             We’d love to hear from you.
           </p>
         </div>
       </header>
 
-      <main className="container mx-auto px-4 py-16">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 max-w-6xl mx-auto">
-          <div className="bg-white/5 rounded-3xl p-8 shadow-2xl backdrop-blur-sm border border-white/10 h-full">
-            <h2 className="text-3xl font-bold mb-6">Contact Information</h2>
+      <main className="container px-4 py-16 mx-auto">
+        <div className="grid max-w-6xl grid-cols-1 gap-12 mx-auto lg:grid-cols-2">
+          <div className="h-full p-8 border shadow-2xl bg-white/5 rounded-3xl backdrop-blur-sm border-white/10">
+            <h2 className="mb-6 text-3xl font-bold">Contact Information</h2>
             <div className="space-y-6 text-gray-300">
               <div className="flex items-start">
                 <MailIcon />
@@ -87,60 +92,60 @@ const Contact = () => {
               </div>
             </div>
             <div className="mt-10">
-              <h3 className="text-lg font-semibold mb-4">Follow Us</h3>
+              <h3 className="mb-4 text-lg font-semibold">Follow Us</h3>
               <div className="flex space-x-4">
-                <a href="#" className="text-gray-400 hover:text-purple-400 transition-colors duration-300">
+                <a href="#" className="text-gray-400 transition-colors duration-300 hover:text-purple-400">
                   <TwitterIcon />
                 </a>
-                <a href="#" className="text-gray-400 hover:text-purple-400 transition-colors duration-300">
+                <a href="#" className="text-gray-400 transition-colors duration-300 hover:text-purple-400">
                   <LinkedinIcon />
                 </a>
-                <a href="#" className="text-gray-400 hover:text-purple-400 transition-colors duration-300">
+                <a href="#" className="text-gray-400 transition-colors duration-300 hover:text-purple-400">
                   <GithubIcon />
                 </a>
               </div>
             </div>
           </div>
 
-          <div className="bg-white/5 rounded-3xl p-8 shadow-2xl backdrop-blur-sm border border-white/10">
-            <h2 className="text-3xl font-bold mb-6">Send Us A Message</h2>
+          <div className="p-8 border shadow-2xl bg-white/5 rounded-3xl backdrop-blur-sm border-white/10">
+            <h2 className="mb-6 text-3xl font-bold">Send Us A Message</h2>
             <form className="space-y-6">
               <div>
-                <label htmlFor="name" className="block text-sm font-medium text-gray-300 mb-2">
+                <label htmlFor="name" className="block mb-2 text-sm font-medium text-gray-300">
                   Name
                 </label>
                 <input
                   type="text"
                   id="name"
                   name="name"
-                  className="w-full px-4 py-3 rounded-xl bg-gray-800 border border-gray-700 focus:outline-none focus:ring-2 focus:ring-purple-500"
+                  className="w-full px-4 py-3 bg-gray-800 border border-gray-700 rounded-xl focus:outline-none focus:ring-2 focus:ring-purple-500"
                 />
               </div>
               <div>
-                <label htmlFor="email" className="block text-sm font-medium text-gray-300 mb-2">
+                <label htmlFor="email" className="block mb-2 text-sm font-medium text-gray-300">
                   Email Address
                 </label>
                 <input
                   type="email"
                   id="email"
                   name="email"
-                  className="w-full px-4 py-3 rounded-xl bg-gray-800 border border-gray-700 focus:outline-none focus:ring-2 focus:ring-purple-500"
+                  className="w-full px-4 py-3 bg-gray-800 border border-gray-700 rounded-xl focus:outline-none focus:ring-2 focus:ring-purple-500"
                 />
               </div>
               <div>
-                <label htmlFor="message" className="block text-sm font-medium text-gray-300 mb-2">
+                <label htmlFor="message" className="block mb-2 text-sm font-medium text-gray-300">
                   Message
                 </label>
                 <textarea
                   id="message"
                   name="message"
                   rows="5"
-                  className="w-full px-4 py-3 rounded-xl bg-gray-800 border border-gray-700 focus:outline-none focus:ring-2 focus:ring-purple-500"
+                  className="w-full px-4 py-3 bg-gray-800 border border-gray-700 rounded-xl focus:outline-none focus:ring-2 focus:ring-purple-500"
                 ></textarea>
               </div>
               <button
                 type="submit"
-                className="w-full py-3 px-6 rounded-full bg-white text-gray-900 font-bold text-lg transition-all duration-300 hover:bg-gray-200 hover:scale-105"
+                className="w-full px-6 py-3 text-lg font-bold text-gray-900 transition-all duration-300 bg-white rounded-full hover:bg-gray-200 hover:scale-105"
               >
                 Send Message
               </button>

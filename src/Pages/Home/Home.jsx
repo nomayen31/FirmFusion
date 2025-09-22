@@ -1,4 +1,5 @@
 import React from "react";
+import { Helmet } from "react-helmet-async";
 
 import CompanyName from "../../Components/CompanyName/CompanyName";
 import { useLoaderData } from "react-router-dom";
@@ -9,9 +10,12 @@ import Hero from "../../Components/Hero/Hero";
 
 const Home = () => {
     const data= useLoaderData();
-    console.log(data);
   return (
     <div className="bg-[#0A0C34] overflow-x-hidden ">
+      <Helmet>
+        <title> Home | JobFinder</title>
+        <meta name="description" content="Find your dream job with JobFinder!" />
+      </Helmet>
       <Hero/>
       <div className="w-[90%] mx-auto text-center">
         <CompanyName  data={data}/>

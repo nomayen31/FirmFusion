@@ -40,13 +40,13 @@ const CompanyCard = ({ data }) => {
         </div>
         
         {/* Actions section */}
-        <div className="pt-4 mt-4 border-t border-gray-100 flex justify-between items-center">
+        <div className="flex items-center justify-between pt-4 mt-4 border-t border-gray-100">
           {/* External Website Link */}
           <a
             href={website}
             target="_blank"
             rel="noopener noreferrer"
-            className="flex items-center justify-center p-2 text-sm font-semibold text-gray-600 transition-all duration-300 rounded-full bg-gray-100 hover:bg-gray-200"
+            className="flex items-center justify-center p-2 text-sm font-semibold text-gray-600 transition-all duration-300 bg-gray-100 rounded-full hover:bg-gray-200"
             onClick={(e) => e.stopPropagation()}
           >
             <FiGlobe size={18} />

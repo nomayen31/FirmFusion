@@ -3,6 +3,7 @@ import { FiEye, FiEyeOff } from "react-icons/fi";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import { AuthContext } from "../../providers/AuthProvider";
 import { updateProfile } from "firebase/auth";
+import { Helmet } from "react-helmet";
 
 export default function Register({ onSubmit }) {
   const [error, setError] = useState("");
@@ -80,6 +81,11 @@ export default function Register({ onSubmit }) {
 
   return (
     <div className="min-h-[80vh] w-full grid place-items-center px-4 py-12 bg-gray-900">
+      <Helmet>
+  <title>Register | JobFinder</title>
+  <meta name="description" content="Create a new account on JobFinder." />
+</Helmet>
+
       <div className="w-full max-w-2xl rounded-3xl bg-white p-8 sm:p-12 shadow-2xl border-4 border-green-500 transform transition-all duration-300 hover:scale-[1.01]">
         <h1 className="text-3xl font-extrabold text-center text-gray-800 sm:text-4xl">
           Create a New Account

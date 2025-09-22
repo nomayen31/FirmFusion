@@ -3,6 +3,7 @@ import { Link, useLocation, useNavigate } from "react-router-dom";
 import { FiEye, FiEyeOff } from "react-icons/fi";
 import { FaGoogle, FaGithub } from "react-icons/fa"; // 👈 Icons
 import { AuthContext } from "../../providers/AuthProvider";
+import { Helmet } from "react-helmet";
 
 export default function Login({ onSubmit }) {
   const [error, setError] = useState("");
@@ -36,7 +37,7 @@ export default function Login({ onSubmit }) {
       });
   };
 
-  // 🔹 Google Login
+  //  Google Provider
   const handleGoogleLogin = () => {
     signInWithGoogle()
       .then((result) => {
@@ -47,7 +48,7 @@ export default function Login({ onSubmit }) {
       .catch((err) => setError(err.code));
   };
 
-  // 🔹 GitHub Login
+  //  GitHub Provider
   const handleGithubLogin = () => {
     signInWithGithub()
       .then((result) => {
@@ -60,6 +61,13 @@ export default function Login({ onSubmit }) {
 
   return (
     <div className="min-h-[70vh] w-full grid place-items-center px-4 py-12 bg-gray-900">
+      <Helmet>
+        <title>Login | JobFinder</title>
+        <meta
+          name="description"
+          content="Login to access your JobFinder account."
+        />
+      </Helmet>
       <div className="w-full max-w-xl rounded-3xl mt-12 bg-white p-8 sm:p-12 shadow-2xl border-4 border-purple-500 transform transition-all duration-300 hover:scale-[1.01]">
         <h1 className="mb-2 text-3xl font-extrabold text-center text-gray-800 sm:text-4xl">
           Welcome Back!
@@ -160,12 +168,18 @@ export default function Login({ onSubmit }) {
 
         {/* Footer */}
         <div className="flex items-center justify-between mt-6">
-          <a href="#" className="text-sm font-medium text-purple-600 hover:underline">
+          <a
+            href="#"
+            className="text-sm font-medium text-purple-600 hover:underline"
+          >
             Forgot Password?
           </a>
           <p className="text-sm text-gray-600">
             New here?{" "}
-            <Link to="/auth/register" className="font-bold text-red-500 hover:underline">
+            <Link
+              to="/auth/register"
+              className="font-bold text-red-500 hover:underline"
+            >
               Register
             </Link>
           </p>

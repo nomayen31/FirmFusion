@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import { FiMapPin, FiGlobe, FiBriefcase } from "react-icons/fi";
 import Companies from "../Companies/Companies";
+import { Helmet } from "react-helmet";
 
 const CompanyDetails = () => {
   const { id } = useParams();
@@ -26,6 +27,11 @@ const CompanyDetails = () => {
 
   return (
     <div className="min-h-screen px-4 py-16 mt-16 bg-[#0A0C34] sm:px-6 lg:px-12">
+      <Helmet>
+  <title>Job Details | JobFinder</title>
+  <meta name="description" content="View and manage your JobFinder profile." />
+</Helmet>
+
       <div className="mx-auto space-y-12 max-w-7xl">
         <div className="bg-white p-8 md:p-10 rounded-3xl shadow-2xl border border-gray-100 transform transition-transform duration-500 hover:scale-[1.01]">
           <div className="flex flex-col space-y-6 md:flex-row md:items-start md:space-y-0 md:space-x-10">

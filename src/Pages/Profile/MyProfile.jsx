@@ -1,5 +1,6 @@
 import React, { useContext } from "react";
 import { AuthContext } from "../../providers/AuthProvider";
+import { Helmet } from "react-helmet";
 
 const MyProfile = () => {
   const { user } = useContext(AuthContext);
@@ -21,6 +22,11 @@ const MyProfile = () => {
 
   return (
     <div className="flex items-center justify-center min-h-screen p-4 bg-gray-100 dark:bg-gray-900 sm:p-8">
+      <Helmet>
+  <title>My Profile | JobFinder</title>
+  <meta name="description" content="View and manage your JobFinder profile." />
+</Helmet>
+
       <div className="w-full max-w-4xl overflow-hidden bg-white shadow-xl dark:bg-gray-800 rounded-2xl">
         {/* Header/Hero Section */}
         <div

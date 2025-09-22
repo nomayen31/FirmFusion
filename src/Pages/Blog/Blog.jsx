@@ -1,6 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import { FaCalendarAlt, FaUserEdit, FaArrowRight, FaClock } from "react-icons/fa";
+import { Helmet } from "react-helmet";
 
 const Blog = () => {
   const posts = [
@@ -94,25 +95,29 @@ const Blog = () => {
   const otherPosts = posts.filter((post) => !post.featured);
 
   return (
-    <div className="min-h-screen bg-gray-950 text-white font-sans">
-      <header className="py-20 text-center bg-gradient-to-br from-indigo-950 to-purple-950 shadow-xl relative overflow-hidden">
+    <div className="min-h-screen font-sans text-white bg-gray-950">
+        <Helmet>
+  <title>Blog | JobFinder</title>
+  <meta name="description" content="View and manage your JobFinder profile." />
+</Helmet>
+      <header className="relative py-20 overflow-hidden text-center shadow-xl bg-gradient-to-br from-indigo-950 to-purple-950">
         <div className="absolute inset-0 opacity-20">
-          <div className="absolute w-72 h-72 bg-indigo-500 rounded-full mix-blend-multiply filter blur-xl opacity-70 animate-blob top-0 -left-4"></div>
-          <div className="absolute w-72 h-72 bg-purple-500 rounded-full mix-blend-multiply filter blur-xl opacity-70 animate-blob animation-delay-2000 top-0 right-4"></div>
-          <div className="absolute w-72 h-72 bg-blue-500 rounded-full mix-blend-multiply filter blur-xl opacity-70 animate-blob animation-delay-4000 top-44 left-24"></div>
+          <div className="absolute top-0 bg-indigo-500 rounded-full w-72 h-72 mix-blend-multiply filter blur-xl opacity-70 animate-blob -left-4"></div>
+          <div className="absolute top-0 bg-purple-500 rounded-full w-72 h-72 mix-blend-multiply filter blur-xl opacity-70 animate-blob animation-delay-2000 right-4"></div>
+          <div className="absolute bg-blue-500 rounded-full w-72 h-72 mix-blend-multiply filter blur-xl opacity-70 animate-blob animation-delay-4000 top-44 left-24"></div>
         </div>
-        <div className="container mx-auto px-4 mt-5 relative z-10">
-          <h1 className="text-4xl sm:text-5xl md:text-6xl font-extrabold tracking-tight leading-tight">
+        <div className="container relative z-10 px-4 mx-auto mt-5">
+          <h1 className="text-4xl font-extrabold leading-tight tracking-tight sm:text-5xl md:text-6xl">
             The Dev's Blog 🚀
           </h1>
-          <p className="mt-4 text-lg sm:text-xl text-indigo-300">
+          <p className="mt-4 text-lg text-indigo-300 sm:text-xl">
             Insights, tutorials, and deep dives on modern web development.
           </p>
         </div>
       </header>
-      <main className="container mx-auto px-4 py-16">
+      <main className="container px-4 py-16 mx-auto">
         <section className="mb-20">
-          <h2 className="text-3xl font-bold mb-8 text-center sm:text-left text-gray-100">Featured Articles</h2>
+          <h2 className="mb-8 text-3xl font-bold text-center text-gray-100 sm:text-left">Featured Articles</h2>
           <div className="grid gap-8 lg:grid-cols-2">
             {featuredPosts.map((post) => (
               <div
@@ -124,21 +129,21 @@ const Blog = () => {
                     <img
                       src={post.image}
                       alt={post.title}
-                      className="w-full h-64 object-cover rounded-t-3xl"
+                      className="object-cover w-full h-64 rounded-t-3xl"
                     />
                   </div>
-                  <div className="p-6 sm:p-8 flex flex-col flex-grow">
+                  <div className="flex flex-col flex-grow p-6 sm:p-8">
                     <div className="mb-4">
                       {post.tags.slice(0, 3).map((tag, index) => (
                         <span key={index} className="inline-block bg-purple-600 text-white text-xs font-semibold px-2.5 py-1 rounded-full mr-2 mb-2">{tag}</span>
                       ))}
                     </div>
-                    <h3 className="text-2xl sm:text-3xl font-bold mb-3 leading-snug">
+                    <h3 className="mb-3 text-2xl font-bold leading-snug sm:text-3xl">
                       {post.title}
                     </h3>
-                    <p className="text-gray-300 mb-6 text-sm flex-grow">{post.excerpt}</p>
+                    <p className="flex-grow mb-6 text-sm text-gray-300">{post.excerpt}</p>
                     <div className="mt-auto">
-                      <div className="flex flex-wrap items-center text-sm text-gray-400 mb-4">
+                      <div className="flex flex-wrap items-center mb-4 text-sm text-gray-400">
                         <div className="flex items-center mr-4">
                           <FaUserEdit className="mr-2 text-purple-400" />
                           <span>{post.author}</span>
@@ -151,7 +156,7 @@ const Blog = () => {
                       <Link
                         to={`/blog/${post.id}`}
                         state={{ post }}
-                        className="group inline-flex items-center text-purple-400 font-bold transition-transform duration-300 hover:text-purple-300"
+                        className="inline-flex items-center font-bold text-purple-400 transition-transform duration-300 group hover:text-purple-300"
                       >
                         Read More
                         <FaArrowRight className="ml-2 transition-transform duration-300 group-hover:translate-x-1" />
@@ -164,7 +169,7 @@ const Blog = () => {
           </div>
         </section>
         <section>
-          <h2 className="text-3xl font-bold mb-8 text-center sm:text-left text-gray-100">All Posts</h2>
+          <h2 className="mb-8 text-3xl font-bold text-center text-gray-100 sm:text-left">All Posts</h2>
           <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
             {otherPosts.map((post) => (
               <Link
@@ -178,14 +183,14 @@ const Blog = () => {
                     <img
                       src={post.image}
                       alt={post.title}
-                      className="w-full h-48 object-cover rounded-xl mb-6"
+                      className="object-cover w-full h-48 mb-6 rounded-xl"
                     />
                   </div>
                   <div className="flex flex-col flex-grow">
-                    <h3 className="text-xl font-bold mb-2 leading-snug">{post.title}</h3>
-                    <p className="text-gray-300 flex-grow text-sm mb-4">{post.excerpt}</p>
+                    <h3 className="mb-2 text-xl font-bold leading-snug">{post.title}</h3>
+                    <p className="flex-grow mb-4 text-sm text-gray-300">{post.excerpt}</p>
                     <div className="mt-auto">
-                      <div className="flex flex-wrap items-center text-sm text-gray-400 mb-2">
+                      <div className="flex flex-wrap items-center mb-2 text-sm text-gray-400">
                         <div className="flex items-center mr-4">
                           <FaUserEdit className="mr-2 text-purple-400" />
                           <span>{post.author}</span>
