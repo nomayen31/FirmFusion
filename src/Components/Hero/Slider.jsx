@@ -2,21 +2,21 @@ import React, { useState, useEffect } from "react";
 
 const slides = [
   {
-    img: "/image/slide1.jpeg",
+    img: "/image/alideravif.avif",
     title: "Elevate Your Digital Experience",
     desc:
       "Explore cutting-edge solutions and seamless design that will transform your project. We're here to help you build something amazing.",
     btn: "Get Started",
   },
   {
-    img: "/image/slide2.jpg",
+    img: "/image/slider2avif.avif",
     title: "Build Brands That Stand Out",
     desc:
       "From strategy to execution, we deliver innovative solutions to help you grow your business in the digital world.",
     btn: "Discover More",
   },
   {
-    img: "/image/slide3.jpg",
+    img: "/image/slider3.avif",
     title: "Transform Ideas Into Reality",
     desc:
       "We turn your vision into functional, scalable, and beautiful digital products.",
@@ -101,8 +101,8 @@ const Slider = () => {
         }
       `}</style>
       
-      <div className="bg-white overflow-x-hidden">
-        <section className="w-full min-h-screen flex items-center justify-center bg-transparent pt-6 sm:pt-10">
+      <div className="overflow-x-hidden bg-white">
+        <section className="flex items-center justify-center w-full min-h-screen pt-6 bg-transparent sm:pt-10">
           {/* 90% viewport size, rounded, centered */}
           <div className="relative w-[90vw] h-[90vh] rounded-[32px] md:rounded-[44px] overflow-hidden shadow-2xl">
             <div className="slider-container">
@@ -117,25 +117,25 @@ const Slider = () => {
                     />
 
                     {/* Dark overlay for readability */}
-                    <div className="absolute inset-0 bg-black/50 z-10" />
+                    <div className="absolute inset-0 z-10 bg-black/50" />
 
                     {/* Left-aligned content */}
-                    <div className="relative z-20 h-full w-full flex items-center justify-start px-8 md:px-16">
-                      <div className="text-white max-w-4xl text-left">
+                    <div className="relative z-20 flex items-center justify-start w-full h-full px-8 md:px-16">
+                      <div className="max-w-4xl text-left text-white">
                         <span className="inline-block text-[10px] sm:text-xs md:text-sm tracking-widest uppercase bg-white/10 backdrop-blur rounded-full px-4 py-2 mb-4">
                           HIRE TOP TALENT, FASTER
                         </span>
 
                         {/* Dynamic Title */}
-                        <h1 className="text-4xl sm:text-6xl md:text-7xl font-extrabold leading-tight mb-8 text-white">
+                        <h1 className="mb-8 text-4xl font-extrabold leading-tight text-white sm:text-6xl md:text-7xl">
                           {s.title}
                         </h1>
 
-                        <p className="text-base sm:text-lg md:text-xl font-light text-gray-100/90 mb-8">
+                        <p className="mb-8 text-base font-light sm:text-lg md:text-xl text-gray-100/90">
                           {s.desc}
                         </p>
 
-                        <button className="group inline-flex items-center justify-center px-6 py-3 border border-transparent text-base font-medium rounded-full shadow-lg text-white bg-purple-600 hover:bg-purple-700 transition-all duration-300 ease-in-out transform hover:scale-105">
+                        <button className="inline-flex items-center justify-center px-6 py-3 text-base font-medium text-white transition-all duration-300 ease-in-out transform bg-purple-600 border border-transparent rounded-full shadow-lg group hover:bg-purple-700 hover:scale-105">
                           {s.btn}
                         </button>
                       </div>
