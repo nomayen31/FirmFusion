@@ -9,8 +9,13 @@ export default function Login({ onSubmit }) {
   const [error, setError] = useState("");
   const [showPassword, setShowPassword] = useState(false);
 
-  const { signInUser, setUser, signInWithGithub, signInWithGoogle } =
-    useContext(AuthContext);
+  const {
+    signInUser,
+    setUser,
+    signInWithGithub,
+    signInWithGoogle,
+    
+  } = useContext(AuthContext);
 
   const location = useLocation();
   const navigate = useNavigate();
@@ -59,6 +64,7 @@ export default function Login({ onSubmit }) {
       .catch((err) => setError(err.code));
   };
 
+
   return (
     <div className="min-h-[70vh] w-full grid place-items-center px-4 py-12 bg-gray-900">
       <Helmet>
@@ -95,7 +101,6 @@ export default function Login({ onSubmit }) {
             />
           </div>
 
-          {/* Password Input */}
           <div className="space-y-2">
             <label
               htmlFor="password"
@@ -127,7 +132,6 @@ export default function Login({ onSubmit }) {
             </div>
           </div>
 
-          {/* Submit Button */}
           <button
             type="submit"
             className="w-full rounded-full bg-gradient-to-r from-purple-600 to-indigo-600 text-white py-4 font-bold tracking-wide shadow-lg transform transition-all duration-300 hover:scale-[1.02] hover:shadow-2xl active:scale-[0.99]"
@@ -136,21 +140,18 @@ export default function Login({ onSubmit }) {
           </button>
         </form>
 
-        {/* Error Message */}
         {error && (
           <p className="mt-4 text-sm font-semibold text-center text-red-500">
             {error}
           </p>
         )}
 
-        {/* Divider */}
         <div className="flex items-center gap-4 my-6">
           <hr className="flex-1 border-gray-300" />
           <span className="text-gray-500">OR</span>
           <hr className="flex-1 border-gray-300" />
         </div>
 
-        {/* Social Login Buttons */}
         <div className="flex flex-col space-y-4">
           <button
             onClick={handleGoogleLogin}
@@ -166,14 +167,14 @@ export default function Login({ onSubmit }) {
           </button>
         </div>
 
-        {/* Footer */}
         <div className="flex items-center justify-between mt-6">
-          <a
-            href="#"
+          <Link
+            to="/auth/forgetPass"
             className="text-sm font-medium text-purple-600 hover:underline"
           >
             Forgot Password?
-          </a>
+          </Link>
+
           <p className="text-sm text-gray-600">
             New here?{" "}
             <Link

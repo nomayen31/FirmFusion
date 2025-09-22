@@ -11,7 +11,6 @@ const FeaturesJobSingleCard = ({ job, bgColor }) => {
         salary,
     } = job;
     
-    // You'll need to define how to calculate or fetch this
     const daysLeftToApply = 5; 
 
     const HeartIcon = ({ isSaved }) => (

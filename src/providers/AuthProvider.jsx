@@ -1,6 +1,6 @@
 import React, { createContext, useEffect, useState } from "react";
 import app from "../firebase/firebase.config";
-import { createUserWithEmailAndPassword, getAuth, GithubAuthProvider, GoogleAuthProvider, onAuthStateChanged, signInWithEmailAndPassword, signInWithPopup, signOut, updateProfile,  } from "firebase/auth";
+import { createUserWithEmailAndPassword, getAuth, GithubAuthProvider, GoogleAuthProvider, onAuthStateChanged, sendPasswordResetEmail, signInWithEmailAndPassword, signInWithPopup, signOut, updateProfile,  } from "firebase/auth";
 // eslint-disable-next-line react-refresh/only-export-components
 export const AuthContext = createContext();
 const auth = getAuth(app);
@@ -32,6 +32,10 @@ const AuthProvider = ({ children }) => {
   const updateUser = (updatedData)=>{
     return updateProfile(auth.currentUser, updatedData)
   }
+  const forgetPassword =(email)=>{
+        SetLoding(true); 
+    return sendPasswordResetEmail(auth, email)
+  }
   const logout = () =>{
     return signOut(auth)
   }
@@ -45,7 +49,8 @@ const AuthProvider = ({ children }) => {
     SetLoding,
     updateUser,
     signInWithGoogle,
-    signInWithGithub
+    signInWithGithub,
+    forgetPassword
   };
   useEffect(()=>{
     const unsubscribe = onAuthStateChanged(auth, currentUser=>{

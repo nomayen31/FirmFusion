@@ -103,30 +103,26 @@ const Slider = () => {
       
       <div className="overflow-x-hidden bg-white">
         <section className="flex items-center justify-center w-full min-h-screen pt-6 bg-transparent sm:pt-10">
-          {/* 90% viewport size, rounded, centered */}
           <div className="relative w-[90vw] h-[90vh] rounded-[32px] md:rounded-[44px] overflow-hidden shadow-2xl">
             <div className="slider-container">
               <div className="slider-wrapper">
                 {slides.map((s, i) => (
                   <div key={i} className="slide">
-                    {/* FULL image */}
                     <img
                       src={s.img}
                       alt=""
                       className="absolute inset-0"
                     />
 
-                    {/* Dark overlay for readability */}
                     <div className="absolute inset-0 z-10 bg-black/50" />
 
-                    {/* Left-aligned content */}
                     <div className="relative z-20 flex items-center justify-start w-full h-full px-8 md:px-16">
                       <div className="max-w-4xl text-left text-white">
                         <span className="inline-block text-[10px] sm:text-xs md:text-sm tracking-widest uppercase bg-white/10 backdrop-blur rounded-full px-4 py-2 mb-4">
                           HIRE TOP TALENT, FASTER
                         </span>
 
-                        {/* Dynamic Title */}
+   
                         <h1 className="mb-8 text-4xl font-extrabold leading-tight text-white sm:text-6xl md:text-7xl">
                           {s.title}
                         </h1>
@@ -144,7 +140,7 @@ const Slider = () => {
                 ))}
               </div>
               
-              {/* Bullet Navigation */}
+
               <div className="bullets">
                 {slides.map((_, index) => (
                   <button

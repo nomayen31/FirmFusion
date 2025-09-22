@@ -17,8 +17,6 @@ const CompanyCard = ({ data }) => {
       >
         
         <div className="flex flex-col items-center flex-grow">
-          
-          {/* Company Logo */}
           <div className="p-3 mb-4 bg-white border border-gray-100 rounded-lg shadow-inner">
             <img
               src={logo}
@@ -26,22 +24,15 @@ const CompanyCard = ({ data }) => {
               className="w-[100px] h-[60px] object-contain"
             />
           </div>
-
-          {/* Company Name */}
           <h2 className="mb-1 text-xl font-bold text-center text-gray-800 transition-colors duration-300 group-hover:text-indigo-600">
             {name}
           </h2>
-
-          {/* Location */}
           <p className="flex items-center text-sm font-medium text-gray-500">
             <FiMapPin className="mr-1 text-xs" />
             {location}
           </p>
         </div>
-        
-        {/* Actions section */}
         <div className="flex items-center justify-between pt-4 mt-4 border-t border-gray-100">
-          {/* External Website Link */}
           <a
             href={website}
             target="_blank"
@@ -51,8 +42,6 @@ const CompanyCard = ({ data }) => {
           >
             <FiGlobe size={18} />
           </a>
-          
-          {/* See All Jobs Link (now just a text span, since the whole card is a link) */}
           <span className="flex items-center space-x-2 text-sm font-semibold text-indigo-600 transition-all duration-300">
             <span>See All Jobs</span>
             <FiArrowUpRight size={18} className="transform transition-transform duration-300 group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />

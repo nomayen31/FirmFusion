@@ -2,7 +2,6 @@ import React, { useState } from 'react';
 import FeaturesJobSingleCard from '../featuresJobSingleCard/featuresJobSingleCard';
 import { Link } from 'react-router-dom';
 
-// Assuming you have this BenefitCard component defined in a separate file or within this file
 const BenefitCard = ({ icon: Icon, title, description, gradientColors }) => {
   return (
     <div className="flex items-start p-5 bg-white rounded-xl shadow-sm border border-gray-100 transform transition-all duration-300 hover:shadow-lg hover:-translate-y-0.5">
@@ -12,13 +11,11 @@ const BenefitCard = ({ icon: Icon, title, description, gradientColors }) => {
       </div>
       <div className="ml-3">
         <h3 className="font-bold leading-snug text-gray-900 text-md">{title}</h3>
-        {/* <p className="mt-1 text-sm text-gray-600">{description}</p> Remove description for a more compact look */}
       </div>
     </div>
   );
 };
 
-// Define your benefit data with specific icons and gradient colors here or import them
 const benefitsData = [
     {
       icon: (props) => ( // Example Lock Icon
@@ -27,28 +24,25 @@ const benefitsData = [
         </svg>
       ),
       title: 'Instant access to work',
-      // description: 'Quickly find and start new projects.', // Removed description for compactness
-      gradientColors: ['#FF8C00', '#FFA500'] // Orange gradient
+      gradientColors: ['#FF8C00', '#FFA500'] 
     },
     {
-      icon: (props) => ( // Example Calendar Icon
+      icon: (props) => ( 
         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" {...props}>
           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
         </svg>
       ),
       title: 'Choose when and where you work',
-      // description: 'Flexibility to fit your lifestyle.',
-      gradientColors: ['#FFD700', '#FFFF00'] // Yellow gradient
+      gradientColors: ['#FFD700', '#FFFF00'] 
     },
     {
-      icon: (props) => ( // Example Chart/Skills Icon
+      icon: (props) => (
         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" {...props}>
           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M7 12l3-3 3 3 4-4M8 21l4-4 4 4M3 5h18M3 9h18m-1 8h-2.5l-2.5 2.5v-2.5h-5V9.5L8 12h2.5V9.5l-2.5-2.5zM7 2h10a2 2 0 012 2v16a2 2 0 01-2 2H7a2 2 0 01-2-2V4a2 2 0 012-2z" />
         </svg>
       ),
       title: 'Grow your skills',
-      // description: 'Access new learning opportunities.',
-      gradientColors: ['#9932CC', '#BA55D3'] // Purple gradient
+      gradientColors: ['#9932CC', '#BA55D3'] 
     },
     {
       icon: (props) => ( // Example User Icon
@@ -57,28 +51,25 @@ const benefitsData = [
         </svg>
       ),
       title: 'Unlock desirable opportunities',
-      // description: 'Get matched with high-value jobs.',
-      gradientColors: ['#FF1493', '#FF69B4'] // Pink gradient
+      gradientColors: ['#FF1493', '#FF69B4']
     },
     {
-      icon: (props) => ( // Example Money Icon
+      icon: (props) => ( 
         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" {...props}>
           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 9V7a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2m2 4h10a2 2 0 002-2v-6a2 2 0 00-2-2H9a2 2 0 00-2 2v6a2 2 0 002 2zm7-5a2 2 0 11-4 0 2 2 0 014 0z" />
         </svg>
       ),
       title: 'Choose when you get paid',
-      // description: 'Flexible payment schedules.',
-      gradientColors: ['#4682B4', '#5F9EA0'] // Blue gradient
+      gradientColors: ['#4682B4', '#5F9EA0'] 
     },
     {
-      icon: (props) => ( // Example Team/Community Icon
+      icon: (props) => ( 
         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" {...props}>
           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 20h-3a2 2 0 01-2-2v-3a2 2 0 012-2h3m0 0l-3-3m3 3l3-3m-6 0a2 2 0 01-2-2V7a2 2 0 012-2h3a2 2 0 012 2v3a2 2 0 01-2 2h-3zm-6 4l-3 3m3-3l3 3m0-6a2 2 0 01-2-2V7a2 2 0 012-2h3a2 2 0 012 2v3a2 2 0 01-2 2h-3zm-6 0l-3 3m3-3l3 3m0-6a2 2 0 01-2-2V7a2 2 0 012-2h3a2 2 0 012 2v3a2 2 0 01-2 2h-3z" />
         </svg>
       ),
       title: 'Earn rewards and benefits',
-      // description: 'Get recognized for your hard work.',
-      gradientColors: ['#20B2AA', '#48D1CC'] // Teal gradient
+      gradientColors: ['#20B2AA', '#48D1CC'] 
     },
   ];
 
@@ -115,7 +106,6 @@ const FeaturesJobs = ({ data }) => {
     <section className="py-12 text-white">
       <div className="w-[90%] mx-auto grid grid-cols-12 gap-12">
 
-        {/* Left-Side Section: Benefit Cards */}
         <div className="col-span-12 mb-10 lg:col-span-7 lg:sticky lg:top-10 lg:self-start">
           <h2 className="mb-8 text-3xl font-bold text-gray-200">
             Why Choose Our Platform?
@@ -126,12 +116,10 @@ const FeaturesJobs = ({ data }) => {
                 key={index}
                 icon={benefit.icon}
                 title={benefit.title}
-                // description={benefit.description} // If you want to include descriptions
                 gradientColors={benefit.gradientColors}
               />
             ))}
           </div>
-          {/* Optional: Add a general call to action below the benefit cards */}
           <div className="flex justify-center mt-10">
             <Link
               to="/contact"
@@ -142,7 +130,6 @@ const FeaturesJobs = ({ data }) => {
           </div>
         </div>
         
-        {/* Right-Side Job Cards */}
         <div className="col-span-12 lg:col-span-5 max-h-[600px] overflow-y-auto scrollbar-hide">
           <h3 className="mb-4 text-sm font-semibold tracking-wide text-gray-400 uppercase">
             Latest Jobs
@@ -157,7 +144,6 @@ const FeaturesJobs = ({ data }) => {
             ))}
           </div>
 
-          {/* "Show More" button for jobs */}
           {visibleJobs < softwareDev.jobs.length && (
             <div className="flex justify-center mt-6">
               <button

@@ -17,6 +17,7 @@ import CaseStudy from "../Pages/CaseStudy/CaseStudy";
 import Blog from "../Pages/Blog/Blog";
 import BlogDetails from "../Pages/BlogDetails/BlogDetails";
 import Contact from "../Pages/Contact/Contact";
+import ForgotPassword from "../Pages/Auth/ForgotPassword";
 
 const router = createBrowserRouter([
   {
@@ -79,6 +80,10 @@ const router = createBrowserRouter([
       {
         path: "/auth/login",
         element: <Login />
+      },
+      {
+          path:'/auth/forgetPass',
+          element:<ForgotPassword/>
       },
       {
         path: "/auth/register",
