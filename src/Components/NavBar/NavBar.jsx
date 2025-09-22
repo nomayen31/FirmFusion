@@ -209,12 +209,6 @@ const NavBar = () => {
                 </li>
               </ul>
             </div>
-
-            <div className="flex justify-center pt-4 space-x-4">
-              <a href="#" className="p-3 text-white transition-colors duration-300 rounded-full bg-neutral-800 hover:bg-blue-600">
-                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="currentColor" d="M22 12c0-5.52-4.48-10-10-10S2 6.48 2 12c0 4.962 3.652 9.096 8.438 9.873v-6.985H7.21V12h3.228V9.395c0-3.19 1.947-4.938 4.795-4.938 1.366 0 2.54.102 2.885.148v3.155h-1.874c-1.503 0-1.795.715-1.795 1.766V12h3.535l-.57 3.238h-2.965v6.985A10 10 0 0022 12z"/></svg>
-              </a>
-            </div>
           </div>
         </div>
       </div>
