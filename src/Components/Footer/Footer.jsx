@@ -27,7 +27,7 @@ export default function Footer() {
               <span className="text-2xl font-semibold tracking-tight text-white">FirmFusion </span>
             </a>
             <p className="mt-4 text-sm leading-6 text-slate-400">
-              Beautifully crafted Tailwind components and templates to ship apps faster. Open‑source and community‑driven.
+              FirmFusion is a smart job-finding platform that connects job seekers with the right opportunities and helps companies hire top talent faster. Discover jobs, apply easily, and build your career with confidence.
             </p>
 
             {/* Socials */}
@@ -169,7 +169,7 @@ export default function Footer() {
         {/* bottom bar */}
         <div className="flex flex-col items-center justify-between gap-4 sm:flex-row">
           <p className="text-xs text-slate-400">
-            © {new Date().getFullYear()} <a className="hover:text-white" href="#">Flowbite™</a>. All rights reserved.
+            © {new Date().getFullYear()} <a className="hover:text-white" href="#">FirmFusion </a>. All rights reserved.
           </p>
           <div className="flex items-center gap-4 text-xs text-slate-400">
             <a className="hover:text-white" href="#">Status</a>

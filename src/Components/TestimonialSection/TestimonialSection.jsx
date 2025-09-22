@@ -93,8 +93,6 @@ export default function TestimonialsSection() {
           </button>
         </div>
       </div>
-
-
       <div className="pointer-events-none absolute inset-0 -z-10 transparent)]" />
     </section>
   );

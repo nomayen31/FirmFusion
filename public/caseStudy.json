@@ -1,0 +1,42 @@
+[
+  {
+    "id": 1,
+    "category": "Healthcare & Technology",
+    "title": "Predictive Diagnostic AI for Early Disease Detection",
+    "description": "This comprehensive case study details our partnership with a leading medical research institution to develop a cutting-edge AI-powered diagnostic platform. The system integrates multi-modal medical data—including high-resolution MRIs, CT scans, and longitudinal patient EHRs—with sub-pixel accuracy. The technical core leverages an ensemble of deep learning models: a 3D Convolutional Neural Network (CNN) for volumetric analysis of medical imagery and a Recurrent Neural Network (RNN) with LSTM units for processing temporal patient data. A pivotal innovation was implementing federated learning, allowing model training across multiple hospital data silos without moving sensitive patient data. We integrated a powerful NLP pipeline using BERT-based transformers to extract critical information from unstructured physician's notes. The platform's interface provides radiologists with an intuitive dashboard highlighting areas of concern with confidence scores and differential diagnoses. This resulted in a 30% increase in early disease detection, significantly improving patient survival rates while reducing unnecessary invasive procedures and healthcare costs.",
+    "image": "https://images.unsplash.com/photo-1674027444485-cec3da58eef4?q=80&w=1632&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    "type": "Client Project"
+  },
+  {
+    "id": 2,
+    "category": "Finance & AI",
+    "title": "AI-Driven Algorithmic Trading Platform",
+    "description": "We developed a sophisticated algorithmic trading platform utilizing reinforcement learning (RL) to execute trades autonomously. The system's agent learns optimal trading strategies through continuous interaction with a simulated market environment, dynamically adjusting its approach to maximize risk-adjusted returns. Built on a microservices framework running on AWS cloud-native infrastructure, the platform processes real-time market data from multiple sources, including news sentiment analysis via advanced NLP techniques. Our technology stack incorporates Python with TensorFlow and PyTorch for model development, Apache Kafka for high-throughput data streaming, and Kubernetes for container orchestration. The system features a robust backtesting module that validates strategies against decades of historical data. This implementation resulted in a 15% outperformance against traditional market benchmarks while maintaining strict risk management protocols, demonstrating the transformative power of autonomous decision-making in quantitative finance.",
+    "image": "https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80",
+    "type": "Startup"
+  },
+  {
+    "id": 3,
+    "category": "Retail & E-commerce",
+    "title": "Personalized AI-Powered Product Recommendation Engine",
+    "description": "We developed a hyper-personalized recommendation engine for a global e-commerce platform processing over 10 million daily users. The system combines collaborative filtering with deep learning-based content filtering, utilizing transformer architectures to understand product semantics and user preferences. Our modern AI implementation features a Generative Adversarial Network (GAN) that creates synthetic user profiles to enhance training data diversity and mitigate model bias. The architecture is built on a serverless AWS Lambda framework that automatically scales to handle traffic spikes, coupled with a Neo4j graph database that maps complex user-product interactions in real-time. We implemented a multi-armed bandit approach for exploration-exploitation tradeoffs, continuously testing new recommendation strategies. The solution integrates with the client's marketing automation platform to deliver personalized product recommendations across email, push notifications, and on-site widgets. This comprehensive approach resulted in a 25% increase in cross-sell revenue, 35% higher click-through rates, and significantly improved customer engagement metrics.",
+    "image": "https://images.unsplash.com/photo-1607082350899-7e105aa886ae?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80",
+    "type": "Internal Project"
+  },
+  {
+    "id": 4,
+    "category": "Manufacturing & Robotics",
+    "title": "AI-Optimized Robotic Process Automation",
+    "description": "We designed and implemented a comprehensive robotic process automation (RPA) solution for a high-volume manufacturing facility, integrating AI throughout the production ecosystem. The robots are equipped with advanced computer vision systems featuring semantic segmentation models that identify components and perform quality control with sub-millimeter precision. Our central control system utilizes a multi-agent reinforcement learning framework to coordinate the entire robotic fleet, dynamically re-routing tasks in response to changing conditions and minimizing downtime. This cyber-physical system represents a paradigm shift in smart manufacturing, where digital intelligence directly orchestrates physical processes in real-time. We implemented digital twin technology to simulate and optimize production lines before physical implementation. The solution includes predictive maintenance capabilities that analyze sensor data to anticipate equipment failures before they occur. This transformation resulted in a 40% reduction in production errors, 20% increase in overall manufacturing efficiency, and 30% reduction in maintenance costs, establishing a new benchmark for Industry 4.0 implementation.",
+    "image": "https://images.unsplash.com/photo-1485827404703-89b55fcc595e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80",
+    "type": "Client Project"
+  },
+  {
+    "id": 5,
+    "category": "Energy & IoT",
+    "title": "Smart Grid Management System with Anomaly Detection",
+    "description": "We developed an IoT-enabled smart grid management system that leverages AI for real-time anomaly detection and predictive maintenance. The system processes massive data streams from thousands of sensors on power lines and substations using a distributed streaming analytics engine built on Apache Flink. At its core, a hierarchical Long Short-Term Memory (LSTM) network architecture learns normal operational patterns across the entire grid infrastructure and flags deviations indicating potential failures or security breaches. Our solution employs a hybrid cloud architecture combining on-premise edge computing for low-latency decision making with cloud-based analytics for long-term trend analysis and model retraining. The system includes a digital twin of the entire grid network, enabling operators to simulate scenarios and test responses without impacting actual operations. We implemented advanced cybersecurity measures including blockchain-based authentication for all grid devices. This comprehensive approach reduced power outages by 18%, optimized energy distribution by 22%, and prevented multiple potential cyber attacks, resulting in significantly improved grid stability and reliability.",
+    "image": "https://images.unsplash.com/photo-1473341304170-971dccb5ac1e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80",
+    "type": "Internal Project"
+  }
+]

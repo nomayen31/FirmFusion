@@ -1,6 +1,6 @@
 import React, { useContext, useState } from "react";
 import { FiEye, FiEyeOff } from "react-icons/fi";
-import { Link, useNavigate } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import { AuthContext } from "../../providers/AuthProvider";
 import { updateProfile } from "firebase/auth";
 
@@ -11,15 +11,16 @@ export default function Register({ onSubmit }) {
   const { createNewUser, setUser, signInWithGithub, signInWithGoogle } =
     useContext(AuthContext);
   const navigate = useNavigate();
+  const location = useLocation();
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    const fd = new FormData(e.currentTarget);
-    const payload = {
-      name: fd.get("name")?.trim(),
-      photoURL: fd.get("photoURL")?.trim(),
-      email: fd.get("email")?.trim(),
-      password: fd.get("password"),
+    const formFields = new FormData(e.currentTarget);
+    const registrationData = {
+      name: formFields.get("name")?.trim(),
+      photoURL: formFields.get("photoURL")?.trim(),
+      email: formFields.get("email")?.trim(),
+      password: formFields.get("password"),
       accepted,
     };
 
@@ -28,23 +29,23 @@ export default function Register({ onSubmit }) {
       return;
     }
 
-    onSubmit?.(payload);
+    onSubmit?.(registrationData);
 
-    createNewUser(payload.email, payload.password)
+    createNewUser(registrationData.email, registrationData.password)
       .then((result) => {
         const user = result.user;
         updateProfile(user, {
-          displayName: payload.name,
-          photoURL: payload.photoURL,
+          displayName: registrationData.name,
+          photoURL: registrationData.photoURL,
         })
           .then(() => {
             setUser({
               ...user,
-              displayName: payload.name,
-              photoURL: payload.photoURL,
+              displayName: registrationData.name,
+              photoURL: registrationData.photoURL,
             });
             alert("Registration successful!");
-            navigate(`${location.state ? location.state : "/"}`);
+            navigate(location.state?.from || "/");
           })
           .catch((error) => {
             console.log("Error updating user profile:", error);
@@ -61,7 +62,7 @@ export default function Register({ onSubmit }) {
         const user = result.user;
         setUser(user);
         alert("Google login successful!");
-        navigate(`${location.state ? location.state : "/"}`);
+        navigate(location.state?.from || "/");
       })
       .catch((error) => setError(error.message));
   };
@@ -72,7 +73,7 @@ export default function Register({ onSubmit }) {
         const user = result.user;
         setUser(user);
         alert("GitHub login successful!");
-        navigate(`${location.state ? location.state : "/"}`);
+        navigate(location.state?.from || "/");
       })
       .catch((error) => setError(error.message));
   };

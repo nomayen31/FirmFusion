@@ -11,6 +11,12 @@ import Register from "../Pages/Auth/Register";
 import ProfileUpdate from "../Pages/Profile/ProfileUpdate";
 import MyProfile from "../Pages/Profile/MyProfile";
 import ProtectedRoute from "./ProtectedRoute";
+import NotFound from "../Pages/NotFound/NotFound";
+import CompanyLayout from "../Layout/CompanyLayout/CompanyLayout";
+import CaseStudy from "../Pages/CaseStudy/CaseStudy";
+import Blog from "../Pages/Blog/Blog";
+import BlogDetails from "../Pages/BlogDetails/BlogDetails";
+import Contact from "../Pages/Contact/Contact";
 
 const router = createBrowserRouter([
   {
@@ -19,24 +25,45 @@ const router = createBrowserRouter([
     children: [
       {
         index: true,
-        element: <Home></Home>,
-        loader: () => fetch("/public/companies.json"),
+        element: <Home />,
+        loader: () => fetch("/public/companies.json")
       },
       {
+        path: '/blog',
+        element: <Blog />
+      },
+      {
+        path: "/blog/:id",
+        element: <BlogDetails />
+      },
+      {
+          path:'/contact',
+          element:<Contact/>
+      }
+      ,
+      {
         path: "/companyList",
-        element: <CompanyList></CompanyList>,
+        element: <CompanyList />
       },
       {
         path: "/company/:id",
         element: (
           <ProtectedRoute>
-            <CompanyDetails />,
+            <CompanyDetails />
           </ProtectedRoute>
         ),
         loader: () => fetch("/public/companies.json"),
       },
       {
         path: "/job/:jobId",
+        element: (
+          <ProtectedRoute>
+            <JobDetails />
+          </ProtectedRoute>
+        ),
+      },
+      {
+        path: "/jobs/:jobId",
         element: (
           <ProtectedRoute>
             <JobDetails />
@@ -51,17 +78,17 @@ const router = createBrowserRouter([
     children: [
       {
         path: "/auth/login",
-        element: <Login></Login>,
+        element: <Login />
       },
       {
         path: "/auth/register",
-        element: <Register />,
+        element: <Register />
       },
       {
         path: "/auth/profileUpdate",
         element: (
           <ProtectedRoute>
-            <ProfileUpdate />,
+            <ProfileUpdate />
           </ProtectedRoute>
         ),
       },
@@ -69,12 +96,24 @@ const router = createBrowserRouter([
         path: "/auth/myProfile",
         element: (
           <ProtectedRoute>
-            <MyProfile />,
+            <MyProfile />
           </ProtectedRoute>
         ),
       },
     ],
   },
+  {
+    path: "/case-study",
+    element: <CompanyLayout />,
+    children: [
+      {
+        index: true,
+        element: <CaseStudy />,
+        loader: () => fetch("/public/caseStudy.json"),
+      }
+    ],
+  },
+  { path: "*", element: <NotFound /> },
 ]);
 
 export default router;

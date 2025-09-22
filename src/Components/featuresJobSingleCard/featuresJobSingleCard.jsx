@@ -1,52 +1,50 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
-const FeaturesJobSingleCard = ({ job, bgColor }) => { 
-    // Destructure the job object
-    const { 
-        companyLogo, 
-        companyName, 
-        jobCategory, 
-        location, 
-        salary, 
+const FeaturesJobSingleCard = ({ job, bgColor }) => {
+    const {
+        id, 
+        companyLogo,
+        companyName,
+        jobCategory,
+        location,
+        salary,
         title,
-        isFeatured, 
-        isSaved, 
-        daysLeftToApply 
+        isFeatured,
+        isSaved,
+        daysLeftToApply
     } = job;
-
-    // Helper for rendering the heart icon based on its saved status
     const HeartIcon = ({ isSaved }) => (
-        <button 
-            className={`p-2 rounded-full transition duration-300 ease-in-out 
-                ${isSaved ? 'text-red-500 hover:bg-red-50' : 'text-gray-400 hover:text-red-500 hover:bg-gray-50'}`}
+        <button
+            className={`p-2 rounded-full transition duration-300 ease-in-out
+          ${isSaved ? 'text-red-500 hover:bg-red-50' : 'text-gray-400 hover:text-red-500 hover:bg-gray-50'}`}
             title={isSaved ? "Remove from saved" : "Save job"}
+            onClick={(e) => e.stopPropagation()}
         >
-            <svg 
-                xmlns="http://www.w3.org/2000/svg" 
-                className="w-5 h-5 fill-current" 
-                viewBox="0 0 20 20" 
+            <svg
+                xmlns="http://www.w3.org/2000/svg"
+                className="w-5 h-5 fill-current"
+                viewBox="0 0 20 20"
                 fill="currentColor"
             >
-                <path 
-                    fillRule="evenodd" 
-                    d="M3.172 5.172a4 4 0 015.656 0L10 6.343l1.172-1.171a4 4 0 115.656 5.656L10 17.657l-6.828-6.829a4 4 0 010-5.656z" 
-                    clipRule="evenodd" 
+                <path
+                    fillRule="evenodd"
+                    d="M3.172 5.172a4 4 0 015.656 0L10 6.343l1.172-1.171a4 4 0 115.656 5.656L10 17.657l-6.828-6.829a4 4 0 010-5.656z"
+                    clipRule="evenodd"
                 />
             </svg>
         </button>
     );
-
     return (
-        // Key changes: Dynamic background (bgColor) and fixed width (w-[550px])
-        <div className={`p-5 transition-shadow duration-300 border border-gray-100 shadow-lg cursor-pointer rounded-2xl hover:shadow-xl w-[550px] flex-shrink-0 ${bgColor || 'bg-white'}`}>
-            
+        <Link
+            to={`/jobs/${id}`}
+            className={`p-5 transition-shadow duration-300 border border-gray-100 shadow-lg cursor-pointer rounded-2xl hover:shadow-xl w-[550px] flex-shrink-0 block ${bgColor || 'bg-white'}`}
+        >
             <div className="flex items-start justify-between mb-4">
-                
-                {/* Company Logo and Job Details */}
                 <div className="flex items-center">
-                    <img 
-                        src={companyLogo} 
-                        alt={`${companyName} logo`} 
+                    <img
+                        src={companyLogo}
+                        alt={`${companyName} logo`}
                         className="object-cover p-1 mr-4 border border-gray-200 w-14 h-14 rounded-xl bg-gray-50"
                     />
                     <div>
@@ -56,22 +54,15 @@ const FeaturesJobSingleCard = ({ job, bgColor }) => {
                         </p>
                     </div>
                 </div>
-
-                {/* Status/Action Icons */}
                 <div className="flex items-center ml-2 space-x-1">
-                    {/* Featured Status (Lightning Bolt) */}
                     {isFeatured && (
                         <span className="p-1.5 text-lg text-yellow-600 bg-yellow-100 rounded-full" title="Featured Job">
                             ⚡
                         </span>
                     )}
-                    
-                    {/* Save Button (Heart Icon) */}
                     <HeartIcon isSaved={isSaved} />
                 </div>
             </div>
-            
-            {/* Location and Salary Tags */}
             <div className="flex flex-wrap gap-2 pt-1 mb-4">
                 <span className="flex items-center px-3 py-1 text-xs font-medium text-indigo-700 bg-indigo-100 rounded-full">
                     <svg className="w-3 h-3 mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.828 0l-4.243-4.243a8 8 0 1111.314 0z"></path><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path></svg>
@@ -81,12 +72,10 @@ const FeaturesJobSingleCard = ({ job, bgColor }) => {
                     {salary}
                 </span>
             </div>
-            
-            {/* Days Left to Apply */}
             <p className="pt-3 mt-3 text-sm text-gray-500 border-t border-gray-100">
                 <span className="font-semibold text-gray-700">{daysLeftToApply}</span> days left to apply
             </p>
-        </div>
+        </Link>
     );
 };
 
