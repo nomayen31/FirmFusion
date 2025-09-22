@@ -21,9 +21,7 @@ const CompanyList = ({ data }) => {
         </p>
 
         <button
-          onClick={() =>
-            navigate(`${location.state ? location.state : "/"}`)
-          }
+          onClick={() => navigate(`${location.state ? location.state : "/"}`)}
           className="px-6 py-2 mt-6 text-white bg-indigo-600 rounded-lg shadow-md hover:bg-indigo-700"
         >
           Go Back
@@ -31,7 +29,7 @@ const CompanyList = ({ data }) => {
       </div>
 
       <div className="flex flex-wrap justify-center gap-x-6 gap-y-12">
-        {data.map((company) => (
+        {(data || []).map((company) => (
           <CompanyCard key={company.id} data={company} />
         ))}
       </div>
