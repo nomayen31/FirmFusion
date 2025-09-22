@@ -1,10 +1,12 @@
 import React, { useEffect, useState } from "react";
-import { useParams } from "react-router-dom";
+import { useParams, useNavigate } from "react-router-dom";
 import { FiMapPin, FiBriefcase, FiDollarSign, FiClock, FiCheckCircle } from "react-icons/fi";
+import toast, { Toaster } from "react-hot-toast";
 
 const JobDetails = () => {
   const { jobId } = useParams();
   const [job, setJob] = useState(null);
+  const navigate = useNavigate();
 
   useEffect(() => {
     fetch("/public/companies.json")
@@ -32,11 +34,15 @@ const JobDetails = () => {
   }
 
   const handleApply = () => {
-    alert(`Applying for: ${job.title} at ${job.companyName}`);
+    toast.success(`Your application for ${job.title} at ${job.companyName} was successful!`);
+    setTimeout(() => {
+      navigate("/");
+    }, 2000); // wait 2 seconds before redirect
   };
 
   return (
-    <div className="min-h-screen px-4 py-16  bg-[#0A0C34] sm:px-6 lg:px-8">
+    <div className="min-h-screen px-4 py-16 bg-[#0A0C34] sm:px-6 lg:px-8">
+      <Toaster position="top-right" reverseOrder={false} />
       <div className="mx-auto mt-12 max-w-7xl">
         {job.bannerImage && (
           <div className="mb-8 overflow-hidden shadow-xl rounded-2xl">
@@ -75,10 +81,12 @@ const JobDetails = () => {
                 </span>
               </div>
             </div>
+
             <div className="p-6 bg-white border border-gray-100 shadow-lg sm:p-8 rounded-xl">
               <h2 className="pb-2 mb-4 text-2xl font-bold text-gray-900 border-b">Job Summary</h2>
               <p className="leading-relaxed text-gray-700 whitespace-pre-wrap">{job.description}</p>
             </div>
+
             {job.requirements && job.requirements.length > 0 && (
               <div className="p-6 bg-white border border-gray-100 shadow-lg sm:p-8 rounded-xl">
                 <h2 className="pb-2 mb-4 text-2xl font-bold text-gray-900 border-b">Key Requirements</h2>
@@ -93,6 +101,7 @@ const JobDetails = () => {
               </div>
             )}
           </div>
+
           <div className="lg:col-span-1">
             <div className="sticky space-y-6 top-10">
               <div className="p-6 bg-white border border-indigo-200 shadow-2xl rounded-xl">
@@ -104,6 +113,7 @@ const JobDetails = () => {
                 </button>
                 <p className="mt-4 text-sm text-center text-gray-500">Takes less than 5 minutes to apply.</p>
               </div>
+
               <div className="p-6 bg-white border border-gray-100 shadow-lg rounded-xl">
                 <h3 className="pb-2 mb-4 text-xl font-bold text-gray-800 border-b">Key Facts</h3>
                 <ul className="space-y-3">

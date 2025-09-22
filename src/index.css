@@ -8,7 +8,6 @@
   scrollbar-width: none;  /* Firefox */
 }
 
-/* For Chrome, Safari and Opera */
 .scrollbar-hide::-webkit-scrollbar {
   display: none;
 }
