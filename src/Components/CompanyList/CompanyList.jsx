@@ -2,7 +2,6 @@ import React from "react";
 import CompanyCard from "../CompanyCard/CompanyCard";
 
 const CompanyList = ({ data }) => {
-
   return (
     <section className="w-full px-4 py-20 mx-auto max-w-7xl sm:px-6 lg:px-8">
       <div className="text-center mb-14">
@@ -16,18 +15,18 @@ const CompanyList = ({ data }) => {
           Explore companies from a variety of industries and find your next
           career-defining opportunity.
         </p>
-
-      
       </div>
 
       <div className="flex flex-wrap justify-center gap-x-6 gap-y-12">
-  {Array.isArray(data) && data.length > 0 ? (
-    data.map((company) => <CompanyCard key={company.id} data={company} />)
-  ) : (
-    <p className="w-full text-center text-white">No companies available.</p>
-  )}
-</div>
+       {Array.isArray(data) && data.length > 0 ? (
+  data.map((company) => <CompanyCard key={company.id} data={company} />)
+) : (
+  <p className="w-full text-center text-white">
+    No companies available.
+  </p>
+)}
 
+      </div>
     </section>
   );
 };

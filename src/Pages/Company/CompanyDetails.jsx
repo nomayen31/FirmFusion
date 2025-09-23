@@ -9,14 +9,13 @@ const CompanyDetails = () => {
   const [company, setCompany] = useState(null);
 
   useEffect(() => {
-    fetch("/public/companies.json")
+    fetch("/companies.json") // Changed from "/public/companies.json"
       .then(res => res.json())
       .then(data => {
         const selectedCompany = data.find(c => c.id.toString() === id.toString());
         setCompany(selectedCompany);
       });
   }, [id]);
-
   if (!company) {
     return (
       <div className="flex items-center justify-center h-screen bg-gray-50">

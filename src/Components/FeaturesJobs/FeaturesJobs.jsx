@@ -75,7 +75,9 @@ const benefitsData = [
 
 
 const FeaturesJobs = ({ data }) => {
-  const softwareDev = data ? data.find(item => item.id === "1") : null;
+  console.log("features",data);
+  
+const softwareDev = Array.isArray(data) ? data.find(item => item.id === "1") : null;
   const initialJobsCount = 5;
   const [visibleJobs, setVisibleJobs] = useState(initialJobsCount);
 

@@ -28,24 +28,29 @@ const router = createBrowserRouter([
       {
         index: true,
         element: <Home />,
-        loader: () => fetch("/public/companies.json")
+        loader: async () => {
+          const res = await fetch("/companies.json");
+          if (!res.ok) {
+            return [];
+          }
+          return res.json();
+        },
       },
       {
-        path: '/blog',
-        element: <Blog />
+        path: "/blog",
+        element: <Blog />,
       },
       {
         path: "/blog/:id",
-        element: <BlogDetails />
+        element: <BlogDetails />,
       },
       {
-          path:'/contact',
-          element:<Contact/>
-      }
-      ,
+        path: "/contact",
+        element: <Contact />,
+      },
       {
         path: "/companyList",
-        element: <CompanyList />
+        element: <CompanyList />,
       },
       {
         path: "/company/:id",
@@ -54,8 +59,13 @@ const router = createBrowserRouter([
             <CompanyDetails />
           </ProtectedRoute>
         ),
-        loader: () => fetch("/public/companies.json"),
-        hydrateFallbackElement:<Loading/>
+        loader: async () => {
+          const res = await fetch("/companies.json");
+          if (!res.ok) {
+            return [];
+          }
+          return res.json();
+        },
       },
       {
         path: "/job/:jobId",
@@ -64,7 +74,6 @@ const router = createBrowserRouter([
             <JobDetails />
           </ProtectedRoute>
         ),
-        hydrateFallbackElement:<Loading/>
       },
       {
         path: "/jobs/:jobId",
@@ -73,7 +82,6 @@ const router = createBrowserRouter([
             <JobDetails />
           </ProtectedRoute>
         ),
-        hydrateFallbackElement:<Loading/>
       },
     ],
   },
@@ -83,15 +91,15 @@ const router = createBrowserRouter([
     children: [
       {
         path: "/auth/login",
-        element: <Login />
+        element: <Login />,
       },
       {
-          path:'/auth/forgetPass',
-          element:<ForgotPassword/>
+        path: "/auth/forgetPass",
+        element: <ForgotPassword />,
       },
       {
         path: "/auth/register",
-        element: <Register />
+        element: <Register />,
       },
       {
         path: "/auth/profileUpdate",
@@ -100,7 +108,6 @@ const router = createBrowserRouter([
             <ProfileUpdate />
           </ProtectedRoute>
         ),
-        hydrateFallbackElement:<Loading/>
       },
       {
         path: "/auth/myProfile",
@@ -109,7 +116,6 @@ const router = createBrowserRouter([
             <MyProfile />
           </ProtectedRoute>
         ),
-        hydrateFallbackElement:<Loading/>
       },
     ],
   },
@@ -120,8 +126,14 @@ const router = createBrowserRouter([
       {
         index: true,
         element: <CaseStudy />,
-        loader: () => fetch("/public/caseStudy.json"),
-      }
+        loader: async () => {
+          const res = await fetch("/caseStudy.json");
+          if (!res.ok) {
+            return [];
+          }
+          return res.json();
+        },
+      },
     ],
   },
   { path: "*", element: <NotFound /> },

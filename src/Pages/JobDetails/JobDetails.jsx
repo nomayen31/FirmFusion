@@ -8,8 +8,8 @@ const JobDetails = () => {
   const [job, setJob] = useState(null);
   const navigate = useNavigate();
 
-  useEffect(() => {
-    fetch("/public/companies.json")
+useEffect(() => {
+    fetch("/companies.json")
       .then((res) => res.json())
       .then((companies) => {
         let selectedJob = null;
@@ -24,7 +24,6 @@ const JobDetails = () => {
         setJob(selectedJob);
       });
   }, [jobId]);
-
   if (!job) {
     return (
       <div className="flex items-center justify-center h-screen bg-gray-50">
