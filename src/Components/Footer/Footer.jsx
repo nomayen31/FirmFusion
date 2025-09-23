@@ -11,7 +11,7 @@ export default function Footer() {
         <div className="md:flex md:items-start md:justify-between">
           {/* Brand */}
           <div className="max-w-sm mb-10 md:mb-0">
-            <a href="#" className="flex items-center gap-3">
+            <Link to="#" className="flex items-center gap-3">
               {/* Logo */}
               <span className="inline-flex items-center justify-center w-10 h-10 rounded-xl bg-gradient-to-tr from-indigo-500 to-blue-500 ring-1 ring-white/10">
                 <svg
@@ -26,7 +26,7 @@ export default function Footer() {
                 </svg>
               </span>
               <span className="text-2xl font-semibold tracking-tight text-white">FirmFusion </span>
-            </a>
+            </Link>
             <p className="mt-4 text-sm leading-6 text-slate-400">
               FirmFusion is a smart job-finding platform that connects job seekers with the right opportunities and helps companies hire top talent faster. Discover jobs, apply easily, and build your career with confidence.
             </p>
@@ -36,7 +36,7 @@ export default function Footer() {
               {[
                 {
                   label: "Facebook",
-                  href: "#",
+                  to: "#",
                   icon: (
                     <svg className="w-4 h-4" viewBox="0 0 8 19" fill="currentColor" aria-hidden>
                       <path
@@ -49,7 +49,7 @@ export default function Footer() {
                 },
                 {
                   label: "Discord",
-                  href: "#",
+                  to: "#",
                   icon: (
                     <svg className="w-4 h-4" viewBox="0 0 21 16" fill="currentColor" aria-hidden>
                       <path d="M16.942 1.556a16.3 16.3 0 0 0-4.126-1.3 12.04 12.04 0 0 0-.529 1.1 15.175 15.175 0 0 0-4.573 0 11.585 11.585 0 0 0-.535-1.1 16.274 16.274 0 0 0-4.129 1.3A17.392 17.392 0 0 0 .182 13.218a15.785 15.785 0 0 0 4.963 2.521c.41-.564.773-1.16 1.084-1.785a10.63 10.63 0 0 1-1.706-.83c.143-.106.283-.217.418-.33a11.664 11.664 0 0 0 10.118 0c.137.113.277.224.418.33-.544.328-1.116.606-1.71.832a12.52 12.52 0 0 0 1.084 1.785 16.46 16.46 0 0 0 5.064-2.595 17.286 17.286 0 0 0-2.973-11.59ZM6.678 10.813a1.941 1.941 0 0 1-1.8-2.045 1.93 1.93 0 0 1 1.8-2.047 1.919 1.919 0 0 1 1.8 2.047 1.93 1.93 0 0 1-1.8 2.045Zm6.644 0a1.94 1.94 0 0 1-1.8-2.045 1.93 1.93 0 0 1 1.8-2.047 1.918 1.918 0 0 1 1.8 2.047 1.93 1.93 0 0 1-1.8 2.045Z" />
@@ -58,7 +58,7 @@ export default function Footer() {
                 },
                 {
                   label: "Twitter",
-                  href: "#",
+                  to: "#",
                   icon: (
                     <svg className="w-4 h-4" viewBox="0 0 20 17" fill="currentColor" aria-hidden>
                       <path
@@ -71,7 +71,7 @@ export default function Footer() {
                 },
                 {
                   label: "GitHub",
-                  href: "#",
+                  to: "#",
                   icon: (
                     <svg className="w-4 h-4" viewBox="0 0 20 20" fill="currentColor" aria-hidden>
                       <path
@@ -84,7 +84,7 @@ export default function Footer() {
                 },
                 {
                   label: "Dribbble",
-                  href: "#",
+                  to: "#",
                   icon: (
                     <svg className="w-4 h-4" viewBox="0 0 20 20" fill="currentColor" aria-hidden>
                       <path
@@ -95,14 +95,14 @@ export default function Footer() {
                     </svg>
                   ),
                 },
-              ].map((s) => (
+              ].map((social) => (
                 <Link
-                  key={s.label}
-                  to={s.href}
-                  aria-label={s.label}
+                  key={social.label}
+                  to={social.to}
+                  aria-label={social.label}
                   className="inline-flex items-center justify-center transition border rounded-full h-9 w-9 border-white/10 bg-white/5 text-slate-300 hover:bg-white/10 hover:text-white focus:outline-none focus:ring-2 focus:ring-blue-500/40"
                 >
-                  {s.icon}
+                  {social.icon}
                 </Link>
               ))}
             </div>
@@ -113,30 +113,30 @@ export default function Footer() {
             <nav className="space-y-4">
               <h3 className="text-xs font-semibold tracking-wide uppercase text-slate-400">Resources</h3>
               <ul className="space-y-3 text-sm">
-                <li><a className="hover:text-white" href="#">Flowbite</a></li>
-                <li><a className="hover:text-white" href="#">Tailwind CSS</a></li>
-                <li><a className="hover:text-white" href="#">Docs</a></li>
-                <li><a className="hover:text-white" href="#">Components</a></li>
+                <li><Link className="hover:text-white" to="#">Flowbite</Link></li>
+                <li><Link className="hover:text-white" to="#">Tailwind CSS</Link></li>
+                <li><Link className="hover:text-white" to="#">Docs</Link></li>
+                <li><Link className="hover:text-white" to="#">Components</Link></li>
               </ul>
             </nav>
 
             <nav className="space-y-4">
               <h3 className="text-xs font-semibold tracking-wide uppercase text-slate-400">Follow us</h3>
               <ul className="space-y-3 text-sm">
-                <li><a className="hover:text-white" href="#">GitHub</a></li>
-                <li><a className="hover:text-white" href="#">Discord</a></li>
-                <li><a className="hover:text-white" href="#">Twitter / X</a></li>
-                <li><a className="hover:text-white" href="#">YouTube</a></li>
+                <li><Link className="hover:text-white" to="#">GitHub</Link></li>
+                <li><Link className="hover:text-white" to="#">Discord</Link></li>
+                <li><Link className="hover:text-white" to="#">Twitter / X</Link></li>
+                <li><Link className="hover:text-white" to="#">YouTube</Link></li>
               </ul>
             </nav>
 
             <nav className="space-y-4">
               <h3 className="text-xs font-semibold tracking-wide uppercase text-slate-400">Legal</h3>
               <ul className="space-y-3 text-sm">
-                <li><a className="hover:text-white" href="#">Privacy Policy</a></li>
-                <li><a className="hover:text-white" href="#">Terms & Conditions</a></li>
-                <li><a className="hover:text-white" href="#">Cookie Policy</a></li>
-                <li><a className="hover:text-white" href="#">Licenses</a></li>
+                <li><Link className="hover:text-white" to="#">Privacy Policy</Link></li>
+                <li><Link className="hover:text-white" to="#">Terms & Conditions</Link></li>
+                <li><Link className="hover:text-white" to="#">Cookie Policy</Link></li>
+                <li><Link className="hover:text-white" to="#">Licenses</Link></li>
               </ul>
             </nav>
 
@@ -170,14 +170,14 @@ export default function Footer() {
         {/* bottom bar */}
         <div className="flex flex-col items-center justify-between gap-4 sm:flex-row">
           <p className="text-xs text-slate-400">
-            © {new Date().getFullYear()} <a className="hover:text-white" href="#">FirmFusion </a>. All rights reserved.
+            © {new Date().getFullYear()} <Link className="hover:text-white" to="#">FirmFusion </Link>. All rights reserved.
           </p>
           <div className="flex items-center gap-4 text-xs text-slate-400">
-            <a className="hover:text-white" href="#">Status</a>
+            <Link className="hover:text-white" to="#">Status</Link>
             <span className="w-px h-3 bg-white/10" />
-            <a className="hover:text-white" href="#">Changelog</a>
+            <Link className="hover:text-white" to="#">Changelog</Link>
             <span className="w-px h-3 bg-white/10" />
-            <a className="hover:text-white" href="#">Contact</a>
+            <Link className="hover:text-white" to="#">Contact</Link>
           </div>
         </div>
       </div>

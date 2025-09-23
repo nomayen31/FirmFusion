@@ -18,6 +18,7 @@ import Blog from "../Pages/Blog/Blog";
 import BlogDetails from "../Pages/BlogDetails/BlogDetails";
 import Contact from "../Pages/Contact/Contact";
 import ForgotPassword from "../Pages/Auth/ForgotPassword";
+import Loading from "../Components/Loading";
 
 const router = createBrowserRouter([
   {
@@ -54,6 +55,7 @@ const router = createBrowserRouter([
           </ProtectedRoute>
         ),
         loader: () => fetch("/public/companies.json"),
+        hydrateFallbackElement:<Loading/>
       },
       {
         path: "/job/:jobId",
@@ -62,6 +64,7 @@ const router = createBrowserRouter([
             <JobDetails />
           </ProtectedRoute>
         ),
+        hydrateFallbackElement:<Loading/>
       },
       {
         path: "/jobs/:jobId",
@@ -70,6 +73,7 @@ const router = createBrowserRouter([
             <JobDetails />
           </ProtectedRoute>
         ),
+        hydrateFallbackElement:<Loading/>
       },
     ],
   },
@@ -96,6 +100,7 @@ const router = createBrowserRouter([
             <ProfileUpdate />
           </ProtectedRoute>
         ),
+        hydrateFallbackElement:<Loading/>
       },
       {
         path: "/auth/myProfile",
@@ -104,6 +109,7 @@ const router = createBrowserRouter([
             <MyProfile />
           </ProtectedRoute>
         ),
+        hydrateFallbackElement:<Loading/>
       },
     ],
   },

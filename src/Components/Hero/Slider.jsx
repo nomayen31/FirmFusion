@@ -39,6 +39,8 @@ const Slider = () => {
     setCurrentSlide(index);
   };
 
+  const isArraySlides = Array.isArray(slides);
+
   return (
     <>
       <style>{`
@@ -53,12 +55,12 @@ const Slider = () => {
           display: flex;
           transition: transform 0.5s ease-in-out;
           height: 100%;
-          width: ${slides.length * 100}%;
-          transform: translateX(-${(100 / slides.length) * currentSlide}%);
+          width: ${isArraySlides ? slides.length * 100 : 0}%;
+          transform: translateX(-${(100 / (isArraySlides ? slides.length : 1)) * currentSlide}%);
         }
         
         .slide {
-          flex: 0 0 ${100 / slides.length}%;
+          flex: 0 0 ${isArraySlides ? 100 / slides.length : 0}%;
           height: 100%;
           position: relative;
         }
@@ -106,50 +108,58 @@ const Slider = () => {
           <div className="relative w-[90vw] h-[90vh] rounded-[32px] md:rounded-[44px] overflow-hidden shadow-2xl">
             <div className="slider-container">
               <div className="slider-wrapper">
-                {slides.map((s, i) => (
-                  <div key={i} className="slide">
-                    <img
-                      src={s.img}
-                      alt=""
-                      className="absolute inset-0"
-                    />
+                {isArraySlides ? (
+                  slides.map((s, i) => (
+                    <div key={i} className="slide">
+                      <img
+                        src={s.img}
+                        alt=""
+                        className="absolute inset-0"
+                      />
 
-                    <div className="absolute inset-0 z-10 bg-black/50" />
+                      <div className="absolute inset-0 z-10 bg-black/50" />
 
-                    <div className="relative z-20 flex items-center justify-start w-full h-full px-8 md:px-16">
-                      <div className="max-w-4xl text-left text-white">
-                        <span className="inline-block text-[10px] sm:text-xs md:text-sm tracking-widest uppercase bg-white/10 backdrop-blur rounded-full px-4 py-2 mb-4">
-                          HIRE TOP TALENT, FASTER
-                        </span>
+                      <div className="relative z-20 flex items-center justify-start w-full h-full px-8 md:px-16">
+                        <div className="max-w-4xl text-left text-white">
+                          <span className="inline-block text-[10px] sm:text-xs md:text-sm tracking-widest uppercase bg-white/10 backdrop-blur rounded-full px-4 py-2 mb-4">
+                            HIRE TOP TALENT, FASTER
+                          </span>
 
-   
-                        <h1 className="mb-8 text-4xl font-extrabold leading-tight text-white sm:text-6xl md:text-7xl">
-                          {s.title}
-                        </h1>
+                          <h1 className="mb-8 text-4xl font-extrabold leading-tight text-white sm:text-6xl md:text-7xl">
+                            {s.title}
+                          </h1>
 
-                        <p className="mb-8 text-base font-light sm:text-lg md:text-xl text-gray-100/90">
-                          {s.desc}
-                        </p>
+                          <p className="mb-8 text-base font-light sm:text-lg md:text-xl text-gray-100/90">
+                            {s.desc}
+                          </p>
 
-                        <button className="inline-flex items-center justify-center px-6 py-3 text-base font-medium text-white transition-all duration-300 ease-in-out transform bg-purple-600 border border-transparent rounded-full shadow-lg group hover:bg-purple-700 hover:scale-105">
-                          {s.btn}
-                        </button>
+                          <button className="inline-flex items-center justify-center px-6 py-3 text-base font-medium text-white transition-all duration-300 ease-in-out transform bg-purple-600 border border-transparent rounded-full shadow-lg group hover:bg-purple-700 hover:scale-105">
+                            {s.btn}
+                          </button>
+                        </div>
                       </div>
                     </div>
+                  ))
+                ) : (
+                  <div className="slide">
+                    <p>Slides data is not available.</p>
                   </div>
-                ))}
+                )}
               </div>
-              
 
               <div className="bullets">
-                {slides.map((_, index) => (
-                  <button
-                    key={index}
-                    className={`bullet ${index === currentSlide ? 'active' : ''}`}
-                    onClick={() => goToSlide(index)}
-                    aria-label={`Go to slide ${index + 1}`}
-                  />
-                ))}
+                {isArraySlides ? (
+                  slides.map((_, index) => (
+                    <button
+                      key={index}
+                      className={`bullet ${index === currentSlide ? 'active' : ''}`}
+                      onClick={() => goToSlide(index)}
+                      aria-label={`Go to slide ${index + 1}`}
+                    />
+                  ))
+                ) : (
+                  <p>No bullets to show.</p>
+                )}
               </div>
             </div>
           </div>
