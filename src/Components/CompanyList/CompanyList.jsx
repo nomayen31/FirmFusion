@@ -1,10 +1,7 @@
 import React from "react";
-import { useNavigate, useLocation } from "react-router-dom";
 import CompanyCard from "../CompanyCard/CompanyCard";
 
 const CompanyList = ({ data }) => {
-  const navigate = useNavigate();
-  const location = useLocation();
 
   return (
     <section className="w-full px-4 py-20 mx-auto max-w-7xl sm:px-6 lg:px-8">
@@ -20,19 +17,17 @@ const CompanyList = ({ data }) => {
           career-defining opportunity.
         </p>
 
-        <button
-          onClick={() => navigate(`${location.state ? location.state : "/"}`)}
-          className="px-6 py-2 mt-6 text-white bg-indigo-600 rounded-lg shadow-md hover:bg-indigo-700"
-        >
-          Go Back
-        </button>
+      
       </div>
 
       <div className="flex flex-wrap justify-center gap-x-6 gap-y-12">
-        {(data || []).map((company) => (
-          <CompanyCard key={company.id} data={company} />
-        ))}
-      </div>
+  {Array.isArray(data) && data.length > 0 ? (
+    data.map((company) => <CompanyCard key={company.id} data={company} />)
+  ) : (
+    <p className="w-full text-center text-white">No companies available.</p>
+  )}
+</div>
+
     </section>
   );
 };

@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 export default function Footer() {
   return (
@@ -95,14 +96,14 @@ export default function Footer() {
                   ),
                 },
               ].map((s) => (
-                <a
+                <Link
                   key={s.label}
-                  href={s.href}
+                  to={s.href}
                   aria-label={s.label}
                   className="inline-flex items-center justify-center transition border rounded-full h-9 w-9 border-white/10 bg-white/5 text-slate-300 hover:bg-white/10 hover:text-white focus:outline-none focus:ring-2 focus:ring-blue-500/40"
                 >
                   {s.icon}
-                </a>
+                </Link>
               ))}
             </div>
           </div>

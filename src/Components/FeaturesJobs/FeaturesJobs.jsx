@@ -110,16 +110,17 @@ const FeaturesJobs = ({ data }) => {
           <h2 className="mb-8 text-3xl font-bold text-gray-200">
             Why Choose Our Platform?
           </h2>
-          <div className="grid grid-cols-1 gap-6 md:grid-cols-2">
-            {benefitsData.map((benefit, index) => (
-              <BenefitCard
-                key={index}
-                icon={benefit.icon}
-                title={benefit.title}
-                gradientColors={benefit.gradientColors}
-              />
-            ))}
-          </div>
+         <div className="grid grid-cols-1 gap-6 md:grid-cols-2">
+  {(Array.isArray(benefitsData) ? benefitsData : []).map((benefit, index) => (
+    <BenefitCard
+      key={index}
+      icon={benefit.icon}
+      title={benefit.title}
+      gradientColors={benefit.gradientColors}
+    />
+  ))}
+</div>
+
           <div className="flex justify-center mt-10">
             <Link
               to="/contact"
@@ -134,15 +135,19 @@ const FeaturesJobs = ({ data }) => {
           <h3 className="mb-4 text-sm font-semibold tracking-wide text-gray-400 uppercase">
             Latest Jobs
           </h3>
-          <div className="flex flex-col space-y-6">
-            {softwareDev.jobs.slice(0, visibleJobs).map((job, index) => (
-              <FeaturesJobSingleCard
-                job={job}
-                key={job.id}
-                bgColor={cardBackgroundColors[index % cardBackgroundColors.length]}
-              />
-            ))}
-          </div>
+         <div className="flex flex-col space-y-6">
+  {Array.isArray(softwareDev?.jobs)
+    ? softwareDev.jobs.slice(0, visibleJobs).map((job, index) => (
+        <FeaturesJobSingleCard
+          job={job}
+          key={job.id}
+          bgColor={cardBackgroundColors[index % cardBackgroundColors.length]}
+        />
+      ))
+    : null
+  }
+</div>
+
 
           {visibleJobs < softwareDev.jobs.length && (
             <div className="flex justify-center mt-6">
